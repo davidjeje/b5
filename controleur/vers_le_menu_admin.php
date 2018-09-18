@@ -22,8 +22,5 @@ function conect()
 	}
 }
 
-function conec()
-{
-	include(dirname(__FILE__).'/../vue/conexion.php');
-}
+
 ?>
