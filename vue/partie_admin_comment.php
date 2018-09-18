@@ -99,13 +99,13 @@
 
 
 		<div id="colorlib-contact">
-			/*normalement le formulaire doit être sur la page d'un blog post. après avoir lu la totalité du blog post il peut commenter celui ci*/
+			
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 animate-box">
 						<h2>Valider ou non un commentaire</h2>
-						<div class="row contact-info-wrap"> /* ajouter l'id du blog en $_get pour savoir quel est le blog que commente l'auteur*/
-						<form method="post" action="index.php?page=coment" enctype="multipart								/form-data">
+						<div class="row contact-info-wrap"> 
+						<form method="post" action="index.php?page=coment" enctype="multipart /form-data">
                                     <label for="author">Auteur du commentaire</label>
                                     <input type="text" class="form-control" name="author" id="author" placeholder="Auteur">
                                   	<br/>
