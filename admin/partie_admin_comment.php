@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -81,7 +82,7 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(images/img_bg_1.jpg);">
+			   	<li style="background-image: url(public/images/img_bg_1.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -109,18 +110,26 @@
 						<h2>Valider ou non un commentaire</h2>
 						<div class="row contact-info-wrap"> 
 							<?php
-							foreach ($admin_comment as $n)
+							/*$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+							$CommentManager= new CommentManager($bdd);*/
+							$read= $CommentManager->readAll1();
+							foreach ($read as $n)
 
 							{
-
-							?>
-                            <h3> Le nom de l'auteur et le commentaire de celui-ci</h3>
-                            <p> Le nom de l'auteur est :</p> <?php echo htmlspecialchars($n['auteur']); ?> <p>et son commentaire est :</p><?php echo htmlspecialchars($n['message']); ?>!
+							?>	<h3> Le nom de l'auteur et le commentaire de celui-ci</h3>
+                            <p> Le nom de l'auteur est :</p> <?php echo htmlspecialchars($n->auteur()); ?>
+                            <p>et son commentaire est :</p><?php echo htmlspecialchars($n->message()); ?>!
                             	<br/>
-                            	<p class="text-center"><a href="index.php?page=vers_la_validation_comment_table&amp;id=<?=$n['id']?>&amp;blog_post_id=<?=$n['blog_post_id']?>&amp;auteur=<?=$n['auteur']?>&amp;message=<?=$n['message']?>" class="btn btn-primary btn-custom">Valider</a><p>
-                            	<p class="text-center"><a href="index.php?page=vers_la_sup_comment_table&amp;id=<?=$n['id']?>" class="btn btn-primary btn-custom">Supprimer</a><p>
+                            	<p class="text-center"><a href="index.php?page=vers_la_validation_comment_table&amp;id=<?=$n->id()?>&amp;blog_post_id=<?=$n->blogPostId()?>&amp;auteur=<?=$n->auteur()?>&amp;message=<?=$n->message()?>" class="btn btn-primary btn-custom">Valider</a><p>
+                            	<p class="text-center">
+                            		<a href="index.php?page=vers_la_sup_comment_table&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">Supprimer</a><p>
                             <?php
 							}
+							/*?>
+                            < 
+                            	
+                            <?php*/
+							
 							?>	
                             	
                             	
@@ -245,5 +254,4 @@ La technologie de la Blockchain doit être surveillée de près en 2018. La supp
 
 	</body>
 </html>
-
 
