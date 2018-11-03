@@ -13,10 +13,23 @@ function inserer_user()
                     {
                         if (!empty($email))
                         {
-                            include(dirname(__FILE__).'/../modele/requete_sql.php');
-                            $inserer = inserer_user_site();
-                    
-                            include(dirname(__FILE__).'/../vue/connexion_user.php'); 
+
+                        function chargerClasse($classname)
+                        {
+                            require 'UserManager/' . $classname .'.php';
+                        }
+                        spl_autoload_register('chargerClasse');
+
+                        $user= new User();
+                        $user->setPseudo($_POST['prenom']);
+                        $user->setPassword($_POST['password']);
+                        $user->setEmail($_POST['email']);
+                        $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+                        $UserManager = new UserManager($bdd);
+                        
+                        $create= $UserManager->create($user);
+                        include(dirname(__FILE__).'/../vue/connexion_user.php');
+                         
                         }
                     }
                           
