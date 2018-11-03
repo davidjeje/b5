@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -110,9 +111,7 @@
 						<h2>Valider ou non un commentaire</h2>
 						<div class="row contact-info-wrap"> 
 							<?php
-							/*$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
-							$CommentManager= new CommentManager($bdd);*/
-							$read= $CommentManager->readAll1();
+							
 							foreach ($read as $n)
 
 							{
