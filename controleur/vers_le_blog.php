@@ -9,10 +9,28 @@ function afficher_un_post()
 	// 2 : Le nombre doit être compris entre 1 et 100
 		if ($_GET['id'] >= 1 AND $_GET['id'] <= 100) 
 		{	
-			include(dirname(__FILE__).'/../modele/requete_sql.php');
-			$post = afficher_le_post();
-			$comments = afficher_le_commentaire();
-	
+			function chargerMaClasse($classe) 
+			{
+    			require 'modele/' . $classe . '.php';
+			}
+			spl_autoload_register('chargerMaClasse');
+
+			function chargerMa($classe) 
+			{
+    			require 'CommentManager/' . $classe . '.php';
+			}
+			spl_autoload_register('chargerMa');
+			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+			$BlogPostManager = new BlogPostManager($bdd);
+			$idd= $_GET['id'];
+			$read= $BlogPostManager->read($idd);
+			$readAll1= $BlogPostManager->readAll1();
+			
+
+			$CommentManager= new CommentManager($bdd);
+			
+			$readc= $CommentManager->readAllc($idd);
+			
 			include(dirname(__FILE__).'/../vue/le_blog.php');
 		}
 	}
