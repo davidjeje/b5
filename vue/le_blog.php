@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -94,17 +95,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="content">
-						<?php
-						foreach ($post as $n)
-
-						{
-						?>
+						
 						<article class="blog-entry">
 							<div class="blog-wrap">
-								<span class="category text-center"><a href="blog.html"><h1> <?php echo $n['title'];?>  </h1></a></span>
-								<h2 class="text-center"><a href="blog.html"><h1> <?php echo $n['chapo'];?>  </h1></a></h2>
+								<span class="category text-center"><a href="blog.html"><h1> <?php echo $read->title()?>  </h1></a></span>
+								<h2 class="text-center"><a href="blog.html"><h1> <?php echo $read->chapo()?>  </h1></a></h2>
 								<div class="blog-image">
-									<a href="blog.html" class="blog-img text-center" style="background-image: url(<?php echo $n['image'];?>);"><span><i class="icon-link"></i></span></a>
+									<a href="blog.html" class="blog-img text-center" style="background-image: url(<?php echo $read->image()?>);"><span><i class="icon-link"></i></span></a>
 									<ul class="share">
 									<li class="text-vertical"><i class="icon-share3"></i></li>
 									<li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -112,43 +109,29 @@
 									<li><a href="#"><i class="icon-googleplus"></i></a></li>
 								</ul>
 								</div>
-								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo $n['date_display'];?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo $n['author'];?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> 5 Comments</a></span>
+								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo $read->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo $read->author()?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> 5 Comments</a></span>
 							</div>
 							
 							
 					
 							<div class="desc">
-								<?php echo $n['content'];?>
+								<?php echo $read->content()?>
 							</div>
-						<?php
-						}
-						?>
-						</article>
+							</article>
+						
+						
 						<div class="side-wrap">
 							<h2 class="sidebar-heading">Commentaires</h2>
 							<blockquote>
-								<?php
-								foreach ($comments as $c)
-
-								{
-								?>
-									 
-									<span class="category text-center"><h1> <?php echo htmlspecialchars($c['auteur']);?>  </h1></a></span>
-									<span class="category text-center"><h1> <?php echo htmlspecialchars($c['message']);?>  </h1></a></span></br>
-								<?php	
-								}
-								?>
+								<span class="category text-center"><h1> <?php echo htmlspecialchars($readc->auteur())?>  </h1></a></span>
+									<span class="category text-center"><h1> <?php echo htmlspecialchars($readc->message())?>  </h1></a></span></br>
 							</blockquote>
 						</div>
 
 						<div class="side-wrap">
 							<h2 class="sidebar-heading">Ajouter un commentaire</h2>
-							<?php
-							foreach ($post as $n)
-
-							{
-							?>
-							<form method="post" action="index.php?page=vers_insert_comment&amp;blog_post_id=<?=$n['id']?>" enctype="multipart/form-data">
+							
+							<form method="post" action="index.php?page=vers_insert_comment&amp;blog_post_id=<?=$read->id()?>" enctype="multipart/form-data">
                                     <label for="author">Auteur du commentaire</label>
                                     <input type="text" class="form-control" name="auteur" id="author" placeholder="Auteur">
                                   	<br/>
@@ -158,10 +141,9 @@
                                     <br/> 
                                     <input type="submit" value="valider" class="btn btn-primary">
                                     
-
                             </form>
                             <?php
-							}
+							
 							?>
 							<h2 class="sidebar-heading">Video Post</h2>
 							<div class="video colorlib-video" style="background-image: url(public/images/info.jpg);">
@@ -310,4 +292,3 @@ France, Paris, 1989 </p>
 	<script src="public/js/main.js"></script>
 	</body>
 </html>
-
