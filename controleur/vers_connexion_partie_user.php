@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 function connexion_user1()
 {
 	if (isset($_POST['connexion']))
@@ -10,16 +10,25 @@ function connexion_user1()
 
                 if (!empty($pseud) and !empty($pass))
                 {
-                        include(dirname(__FILE__).'/../modele/requete_sql.php');
-                        $connexion_user= connexion_user_site1();
-                        //$pass_correct= password_verify($pass,$show['password']);
-                           
-                        if ($connexion_user['password'] == $pass)
+
+                        function chargerClasse($classname)
+                        {
+                                require 'UserManager/' . $classname . '.php';
+                        }
+                        spl_autoload_register('chargerClasse');
+                        $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+                        $UserManager = new UserManager($bdd);
+                        
+                        $read= $UserManager->read($pseud);
+                        //echo $read->password();
+                        /*var_dump($pass);
+                        die;*/
+                        if ( $read->password() == $pass)
                         {
                        
-                        $_SESSION['id']= $connexion_user['id'];
-                        $_SESSION['pseudo']= $connexion_user['pseudo'];
-                        $_SESSION['email']= $connexion_user['email'];
+                        $_SESSION['id']= $read->id();
+                        $_SESSION['pseudo']= $read->pseudo();
+                        $_SESSION['email']= $read->email();
                         include(dirname(__FILE__).'/../vue/profil.php');
                         }
                         else
@@ -34,4 +43,3 @@ function connexion_user1()
        
     
 };
-
