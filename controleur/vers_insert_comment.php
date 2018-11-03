@@ -9,9 +9,21 @@ function inserer_comment()
 	// 2 : Le nombre doit être compris entre 1 et 100
 		if ($_GET['blog_post_id'] >= 1 AND $_GET['blog_post_id'] <= 100) 
 		{	
-			include(dirname(__FILE__).'/../modele/requete_sql.php');
-			$inserer= inserer_le_commentaire();
+			
+			function chargerClasse($Comment)
+			{
+  				require  'CommentManager/' .$Comment.'.php';
+			}
+			spl_autoload_register('chargerClasse');
+			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+			$Comment= new Comment();
+			$Comment->setBlogPostId($_GET['id']);
+					->setAuteur($_POST['auteur']);
+					->setMessage($_POST['message']);
+			$CommentManager= new CommentManager($bdd);
+			$create= $CommentManager->create($Comment);
 			include(dirname(__FILE__).'/../vue/message_traitement_envoi_comment.php');
+			
 		}
 	}
 	else
