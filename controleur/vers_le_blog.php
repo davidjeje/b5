@@ -15,11 +15,6 @@ function afficher_un_post()
 			}
 			spl_autoload_register('chargerMaClasse');
 
-			function chargerMa($classe) 
-			{
-    			require 'CommentManager/' . $classe . '.php';
-			}
-			spl_autoload_register('chargerMa');
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 			$BlogPostManager = new BlogPostManager($bdd);
 			$idd= $_GET['id'];
