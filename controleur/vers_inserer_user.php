@@ -16,7 +16,7 @@ function inserer_user()
 
                         function chargerClasse($classname)
                         {
-                            require 'UserManager/' . $classname .'.php';
+                            require 'modele/' . $classname .'.php';
                         }
                         spl_autoload_register('chargerClasse');
 
