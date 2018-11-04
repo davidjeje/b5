@@ -17,7 +17,7 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
     elseif ($_GET['page'] == 'vers_le_blog') 
     {
         include('modele/BlogPostManager.php');
-        include('CommentManager/CommentManager.php');
+        include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
         afficher_un_post();
         
@@ -37,14 +37,14 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
 
     elseif ($_GET['page'] == 'vers_la_validation_comment') 
     {
-        include('CommentManager/CommentManager.php');
+        include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
         afficher_la_validation_comment();
     }
 
     elseif ($_GET['page'] == 'vers_insert_comment') 
     {
-        include('CommentManager/CommentManager.php');
+        include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
         inserer_comment();
     }
@@ -105,14 +105,14 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
 
     elseif ($_GET['page'] == 'vers_la_validation_comment_table') 
     {
-        include('CommentManager/CommentManager.php');
+        include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
          inserer_comment_table();
     }
 
     elseif ($_GET['page'] == 'vers_la_sup_comment_table') 
     {
-        include('CommentManager/CommentManager.php');
+        include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
          sup_comment_table();
     }
@@ -125,28 +125,27 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
 
      elseif ($_GET['page'] == 'vers_connexion_user') 
     {
-        include('UserManager/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
          connexion_user();
     }
 
     elseif ($_GET['page'] == 'vers_inserer_user') 
     {
-        include('UserManager/UserManager.php');
+        include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
         inserer_user();
     }
 
     elseif ($_GET['page'] == 'vers_connexion_partie_user') 
     {
-        include('UserManager/UserManager.php');
+        include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
          connexion_user1();
     }
 
     elseif ($_GET['page'] == 'vers_deconnexion_user') 
     {
-        include('UserManager/UserManager.php');
+        include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
         deconnexion_user();
     }
