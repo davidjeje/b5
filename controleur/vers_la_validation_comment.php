@@ -7,7 +7,7 @@ function afficher_la_validation_comment()
 	
 	function chargerClasse($classname)
 	{
-  		require  'CommentManager/' .$classname.'.php';
+  		require  'modle/' .$classname.'.php';
 	}
 	spl_autoload_register('chargerClasse');
 	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
