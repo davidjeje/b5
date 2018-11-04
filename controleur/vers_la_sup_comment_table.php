@@ -14,7 +14,7 @@ function sup_comment_table()
 			include(dirname(__FILE__).'/../admin/comment_definitivement_supprimer.php');*/
 			function chargerClasse($classname)
 			{
-  				require  'CommentManager/' .$classname.'.php';
+  				require  'modele/' .$classname.'.php';
 			}
 			spl_autoload_register('chargerClasse');
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
