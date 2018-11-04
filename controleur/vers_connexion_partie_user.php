@@ -13,7 +13,7 @@ function connexion_user1()
 
                         function chargerClasse($classname)
                         {
-                                require 'UserManager/' . $classname . '.php';
+                                require 'modele/' . $classname . '.php';
                         }
                         spl_autoload_register('chargerClasse');
                         $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
