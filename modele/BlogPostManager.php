@@ -1,6 +1,6 @@
 <?php
 
-include(dirname(__FILE__).'/../entite/BlogPost.php');
+include(dirname(__FILE__).'/../BlogPost.php');
 
 class BlogPostManager
 {
