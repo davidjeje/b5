@@ -93,10 +93,7 @@
 				<div class="row">
 					<div class="content">
 					<?php
-						$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
-						$BlogPostManager = new BlogPostManager($bdd);
-
-						$readAll= $BlogPostManager->readAll();
+						
 						foreach ($readAll as $n)
 
 						{
