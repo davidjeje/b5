@@ -1,10 +1,7 @@
 <?php
 function inserer_comment_table()
 {
-	/*include(dirname(__FILE__).'/../modele/requete_sql.php');
-	$inserer= inserer_le_commentaire_valider();
-	$sup= supprimer_le_commentaire();
-	include(dirname(__FILE__).'/../admin/comment_definitivement_valider.php');*/
+	
 	function chargerClasse($classname)
 			{
   				require  'modele/' .$classname.'.php';
@@ -19,8 +16,9 @@ function inserer_comment_table()
             ->setMessage($_GET['message']);
             
             
-	$CommentManager= new CommentManager();
-	$createc= $CommentManager->createc()
+	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+	$CommentManager= new CommentManager($bdd);
+	$createc= $CommentManager->createc();
 	include(dirname(__FILE__).'/../admin/comment_definitivement_valider.php');
 
 };
