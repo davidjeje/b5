@@ -132,8 +132,9 @@ class BlogPost
     }
   }
 
-  public function setDateDisplay($dateDisplay)
+  public function setDate_display($dateDisplay)
   {
+    
     if (is_string($dateDisplay))
     {
       $this->_dateDisplay = $dateDisplay;

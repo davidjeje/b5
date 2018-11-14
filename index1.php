@@ -16,4 +16,3 @@ elseif (isset($_POST['author']) and isset($_POST['title']) )
 
 
 ?>
-

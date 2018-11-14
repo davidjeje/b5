@@ -20,9 +20,7 @@ function connexion_user1()
                         $UserManager = new UserManager($bdd);
                         
                         $read= $UserManager->read($pseud);
-                        //echo $read->password();
-                        /*var_dump($pass);
-                        die;*/
+                        
                         if ( $read->password() == $pass)
                         {
                        

@@ -1,5 +1,5 @@
 <?php
-include(dirname(__FILE__).'/../User.php');
+include(dirname(__FILE__).'/../user/User.php');
 
 class UserManager
 {

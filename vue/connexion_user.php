@@ -120,7 +120,7 @@
                             <div class="row form-group">
                                 <div class="col-md-6">
                                     <label for="fname">Pseudo</label>
-                                    <input type="text" name="prenom" id="fname" class="form-control" placeholder="Your firstname" >
+                                    <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Your firstname" >
                                 </div>
                             </div>
 
@@ -134,7 +134,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12">
                                     <label for="subject">Mot de passe</label>
-                                    <input type="password" name="password" id="subject" class="form-control" placeholder="Your password" required>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Your password" required>
                                 </div>
                             </div>
 
@@ -250,5 +250,4 @@
 
 	</body>
 </html>
-
 

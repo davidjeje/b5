@@ -75,10 +75,9 @@ function afficher_le_commentaire_partie_admin()
 function inserer_le_blog_post()
 {
 	global $bdd;
-	 $image= $_FILES['image']['name'];
 	
-	$req = $bdd->prepare('INSERT INTO blog_post ( author, title, chapo, content, image, date_display) VALUES(?,?,?,?,?,?)');
-	$req->execute(array($_POST['author'], $_POST['title'], $_POST['chapo'], $_POST['content'], 'public/images/'.$image, $_POST['change_date']));
+	$req = $bdd->prepare('INSERT INTO blog_post ( author, title, chapo, content) VALUES(?,?,?,?)');
+	$req->execute(array($_POST['author'], $_POST['title'], $_POST['chapo'], $_POST['content']));
 	
 	$req->closeCursor();
 };
@@ -163,58 +162,16 @@ function inserer_user_site()
 	$req->closeCursor();
 };
 
-
-
 function connexion_user_site1()
 {
 	global $bdd;
-	
 	$req = $bdd->prepare('SELECT * FROM user WHERE pseudo = :pseudo');
-	$req->execute(array( 'pseudo'=>$_POST['pseudo']));
+	$req->execute(array('pseudo'=>$_POST['pseudo']));
 	$req= $req->fetch();
 	return $req;
-	
-	
-	$req->closeCursor();
-};
+	//$req->closeCursor();
+}
 
-function id_user()
-{
-	global $bdd;
-	$req = $bdd->prepare('SELECT id FROM user WHERE id= :id LIMIT 1');
-	$req->execute(array('id' => $_GET['id']));
-	$show= $req->fetch();
-	return $show;
-	$req->closeCursor();
-};
-
-function afficher_user()
-{
-	global $bdd;
-	$news= array();
-	$req= $bdd ->query('SELECT pseudo FROM user');
-	while ($data = $req->fetchall()) 
-	{
-		
-		$news = $data;
-		return $news;
-	}
-	$req->closeCursor();
-};
-
-function afficher_password()
-{
-	global $bdd;
-	$news= array();
-	$req= $bdd ->query('SELECT password FROM user');
-	while ($data = $req->fetchall()) 
-	{
-		
-		$news = $data;
-		return $news;
-	}
-	$req->closeCursor();
-};
 
 /*function comparer_information_useradmin_form_a_la_base()
 {
@@ -268,5 +225,4 @@ function conexion()
 		return $ne;
 	}
 };*/
-
 
