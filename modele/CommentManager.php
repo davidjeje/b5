@@ -1,7 +1,7 @@
 <?php
 
-include(dirname(__FILE__).'/../comment/Comment.php');
-include(dirname(__FILE__).'/../commentValidate/CommentValidate.php');
+include(dirname(__FILE__).'/../modele/Comment.php');
+include(dirname(__FILE__).'/../modele/CommentValidate.php');
 
 
 
