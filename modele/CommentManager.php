@@ -1,7 +1,8 @@
 <?php
 
-include(dirname(__FILE__).'/../Comment.php');
-include(dirname(__FILE__).'/../CommentValidate.php');
+include(dirname(__FILE__).'/../comment/Comment.php');
+include(dirname(__FILE__).'/../commentValidate/CommentValidate.php');
+
 
 
 class CommentManager

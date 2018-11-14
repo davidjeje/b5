@@ -12,6 +12,7 @@ function afficher_blog_post()
 	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 	$BlogPostManager = new BlogPostManager($bdd);//il ne trouve pas la class
 	$readAll= $BlogPostManager->readAll();
+	
 	$readAll1= $BlogPostManager->readAll1();
 	 
 

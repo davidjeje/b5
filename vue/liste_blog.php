@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -106,7 +105,7 @@
 						<article class="blog-entry">
 							<div class="blog-wrap">
 								<span class="category text-center"><a href="index.php?page=vers_le_blog&amp;id=<?=$n->id()?>"><h1> <?php echo$n->title()?>  </h1></a></span>
-								<h2 class="text-center"><a href="blog.html"><h1> <?php echo$n->chapo()?>  </h1></a></h2>
+								<h2 class="text-center"><a href="blog.html"><h1> <?php echo$n->chapo()?>   </h1></a></h2>
 								<div class="blog-image">
 									<a href="index.php?page=vers_le_blog&amp;id=<?=$n->id()?>" class="blog-img text-center" style="background-image: url(<?php echo$n->image()?>)";><span><i class="icon-link"></i></span></a>
 									<ul class="share">
@@ -116,7 +115,7 @@
 									<li><a href="#"><i class="icon-googleplus"></i></a></li>
 									</ul>
 								</div>
-								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
+								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i><?php echo$n->dateDisplay()?> </a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
 							</div>
 							
 							

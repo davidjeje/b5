@@ -140,7 +140,7 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
     {
         include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
-         connexion_user1();
+        connexion_user1();
     }
 
     elseif ($_GET['page'] == 'vers_deconnexion_user') 

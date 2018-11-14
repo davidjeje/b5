@@ -79,4 +79,3 @@
   @include loop-grid-columns($grid-columns, $class, push);
   @include loop-grid-columns($grid-columns, $class, offset);
 }
-
