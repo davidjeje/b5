@@ -2,13 +2,13 @@
 function inserer_comment_table()
 { 
 	
-	function chargerClasse($classname)
-			{
-  				require  'modele/' .$classname.'.php';
-			}
+	function chargerClasse($comment)
+	{
+  		require  'modele/' .$comment.'.php';
+	}
 
+	spl_autoload_register('chargerClasse');
 
-			spl_autoload_register('chargerClasse');
 	$Comment= new Comment();
 	$Comment->setId($_GET['Id']);
 	$Comment->setBlogPostId($_GET['blogPostId']);

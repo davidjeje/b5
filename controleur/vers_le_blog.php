@@ -9,19 +9,19 @@ function afficher_un_post()
 	// 2 : Le nombre doit être compris entre 1 et 100
 		if ($_GET['id'] >= 1 AND $_GET['id'] <= 100) 
 		{	
-			function chargerMaClasse($classe) 
+			function chargerMaClasse($Managers) 
 			{
-    			require 'modele/' . $classe . '.php';
+    			require 'modele/' . $Managers . '.php';
 			}
 			spl_autoload_register('chargerMaClasse');
 
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+
 			$BlogPostManager = new BlogPostManager($bdd);
 			$idd= $_GET['id'];
 			$read= $BlogPostManager->read($idd);
 			$readAll1= $BlogPostManager->readAll1();
 			
-
 			$CommentManager= new CommentManager($bdd);
 			$readc= $CommentManager->readAllc($idd);
 			

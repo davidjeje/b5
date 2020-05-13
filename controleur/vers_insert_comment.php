@@ -22,8 +22,7 @@ function inserer_comment()
 			$Comment->setMessage($_POST['message']);
 			
 			$CommentManager= new CommentManager($bdd);
-			/*var_dump($Comment);
-			die;*/
+			
 			$create= $CommentManager->create($Comment);
 			include(dirname(__FILE__).'/../vue/message_traitement_envoi_comment.php');
 			
