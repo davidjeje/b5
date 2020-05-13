@@ -59,44 +59,6 @@ class UserManager
         $executeIsOk = $this->_SqlRequest->execute();  
     } 
 
-    /*public function update(BlogPost $blog)
-    {
-    
-        $this->_pdoStatement = $this->_bdd->prepare('UPDATE blog_post SET author = :author, title = :title, chapo = :chapo, content = :content WHERE id = :id LIMIT 1');
-
-        $this->_pdoStatement->bindValue(':author', $blog->author(), PDO::PARAM_STR);
-        $this->_pdoStatement->bindValue(':title', $blog->title(), PDO::PARAM_STR);
-        $this->_pdoStatement->bindValue(':chapo', $blog->chapo(), PDO::PARAM_STR);
-        $this->_pdoStatement->bindValue(':content', $blog->content(), PDO::PARAM_STR);
-        $this->_pdoStatement->bindValue(':id', $blog->id(), PDO::PARAM_INT);
-    
-        return $this->_pdoStatement->execute();
-    } 
-
-    public function delete(BlogPost $blog)
-    {
-        $req = $bdd->prepare('DELETE FROM blog_post WHERE id = :id LIMIT 1');
-
-        $req-> bindValue(':id', $_GET['id'], PDO:: PARAM_INT);
-        $this->_pdoStatement = $this->_bdd->prepare('DELETE FROM blog_post WHERE id = :id LIMIT 1');
-
-        $this->_pdoStatement->bindValue(':id', $blog->id(), PDO::PARAM_INT);
-    
-        return $this->_pdoStatement->execute();
-    } 
-
-    public function save(BlogPost $blog)
-    {
-        if(is_null($blog->getId()))
-        {
-            return $this->create($blog);
-        }
-        else
-        {
-            return $this->update($blog);
-        }
-    }*/
-
     public function setDb(PDO $bdd)
     {
         $this->_bdd = $bdd;

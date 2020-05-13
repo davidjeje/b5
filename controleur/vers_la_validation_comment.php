@@ -17,5 +17,4 @@ function afficher_la_validation_comment()
 	include(dirname(__FILE__).'/../admin/partie_admin_comment.php');
 };
 
-
 ?>

@@ -12,7 +12,7 @@ function inserer_comment_table()
 	$Comment= new Comment();
 	$Comment->setId($_GET['Id']);
 	$Comment->setBlogPostId($_GET['blogPostId']);
-    $Comment->setAuteur($_GET['auteur']);
+    $Comment->setAuteur($_GET['auteur']); 
     $Comment->setMessage($_GET['message']);
             
             
