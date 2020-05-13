@@ -79,7 +79,7 @@ class Comment
     if ($userId > 0)
     {
       $this->_userId = $userId;
-    }
+    } 
   }
 
   public function setBlogPostId($blogPostId)

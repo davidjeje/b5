@@ -4,7 +4,6 @@ include(dirname(__FILE__).'/../modele/Comment.php');
 include(dirname(__FILE__).'/../modele/CommentValidate.php');
 
 
-
 class CommentManager
 {
   private $_bdd;
@@ -38,12 +37,12 @@ class CommentManager
         return false;
       }       
              
-  } 
+  }  
 
   public function readAll1()
   {
     
-      
+       
       $this->_bl= [];
       $comment= [];
       $this->_pdoStatement = $this->_bdd->query('SELECT * FROM comment_to_validate');
@@ -56,9 +55,7 @@ class CommentManager
         return $this->_bl;          
   } 
   
-
-  
-
+ 
   public function read($id)
   {
       $this->_pdoStatement = $this->_db->prepare('SELECT * FROM comment WHERE id = :id');
@@ -77,14 +74,32 @@ class CommentManager
       }       
   } 
 
+  public function read1($id)
+  {
+      $this->_pdoStatement = $this->_db->prepare('SELECT * FROM comment_to_validate WHERE id = :id');
+      
+      $this->_pdoStatement->bindValue(':id', $id, PDO::PARAM_INT);
+      $executeIsOk = $this->_pdoStatement->execute();
+
+      if($executeIsOk)
+      {
+        
+        return new CommentValidate($this->_pdoStatement->fetch());
+      }
+      else
+      {
+        return false;
+      }       
+  } 
+
   
 
-  public function create(Comment $comment)
+  public function create(CommentValidate $comment)
   {
     
     $this->_pdoStatement = $this->_bdd->prepare('INSERT INTO comment_to_validate (blog_post_id, message, auteur) VALUES (:blog_post_id, :message, :auteur)');
 
-    $this->_pdoStatement->bindValue(':blog_post_id', $comment->blogPostId(), PDO::PARAM_STR);
+    $this->_pdoStatement->bindValue(':blog_post_id', $comment->blogPostId(), PDO::PARAM_INT);
     $this->_pdoStatement->bindValue(':message', $comment->message(), PDO::PARAM_STR);
     $this->_pdoStatement->bindValue(':auteur', $comment->auteur(), PDO::PARAM_STR);
     
@@ -98,7 +113,9 @@ class CommentManager
     else
     {
       $id= $this->_bdd->lastInsertId();
-      $blog= $this->read($id);
+      
+      /*$blog= $this->read1($id);
+      */
       return true;
     }   
   } 
