@@ -1,7 +1,7 @@
 <h1>Hello</h1>
 <p> salut ça va ?<p>
 
-<?php
+<?php 
 class BlogManager
 {
   private /*global*/ $_bdd; // Instance de PDO

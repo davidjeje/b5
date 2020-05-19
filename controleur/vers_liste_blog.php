@@ -1,4 +1,4 @@
-<?php
+<?php 
 	
 function afficher_blog_post()
 {

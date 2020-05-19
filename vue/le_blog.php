@@ -90,7 +90,7 @@
 					</div>
 				</div>
 			</div>
-		</aside>
+ 		</aside>
 
 		<div id="colorlib-container">
 			<div class="container">
