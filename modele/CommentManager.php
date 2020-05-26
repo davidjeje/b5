@@ -3,7 +3,6 @@
 include(dirname(__FILE__).'/../modele/Comment.php');
 include(dirname(__FILE__).'/../modele/CommentValidate.php');
 
-
 class CommentManager
 {
     private $_bdd;
@@ -36,12 +35,12 @@ class CommentManager
     {  
         $this->_Objects = [];
         $comments = [];
+
         $this->_SqlRequest = $this->_bdd->query('SELECT * FROM comment_to_validate');
       
-     
         while ($comments = $this->_SqlRequest->fetch(PDO::FETCH_ASSOC)) 
         {
-            $this->_Objects[] = new Comment($comments);
+            $this->_Objects[] = new CommentValidate($comments);
         }
         return $this->_Objects;          
     } 
@@ -81,15 +80,13 @@ class CommentManager
         }       
     } 
 
-    public function create(CommentValidate $commentValidate)
+    public function create(CommentValidate $commentValidate, $blogPostId)
     {
-    
-        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO comment_to_validate (blog_post_id, message, auteur) VALUES (:blog_post_id, :message, :auteur)');
+        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO comment_to_validate ( blog_post_id, message, auteur) VALUES (:blog_post_id, :message, :auteur)');
 
-        $this->_SqlRequest->bindValue(':blog_post_id', $commentValidate->blogPostId(), PDO::PARAM_INT);
+        $this->_SqlRequest->bindValue(':blog_post_id', $blogPostId, PDO::PARAM_INT);
         $this->_SqlRequest->bindValue(':message', $commentValidate->message(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':auteur', $commentValidate->auteur(), PDO::PARAM_STR);
-    
     
         $executeIsOk = $this->_SqlRequest->execute();
 
@@ -100,22 +97,18 @@ class CommentManager
         else
         {
             $id= $this->_bdd->lastInsertId();
-            /*$blog= $this->read1($id);*/
             return true;
         }   
     } 
 
-    public function createc(Comment $comment)
+    public function birth(Comment $comment, $blogPostId)
     {
-    
-        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO comment (id, blog_post_id, message, auteur) VALUES (:id, :blog_post_id, :message, :auteur)');
+        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO comment ( blog_post_id, message, auteur, date_display) VALUES (:blog_post_id, :message, :auteur, NOW())');
 
-        $this->_SqlRequest->bindValue(':id', $comment->id(), PDO::PARAM_INT);
-        $this->_SqlRequest->bindValue(':blog_post_id', $comment->blogPostId(), PDO::PARAM_INT);
+        $this->_SqlRequest->bindValue(':blog_post_id', $blogPostId, PDO::PARAM_INT);
         $this->_SqlRequest->bindValue(':message', $comment->message(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':auteur', $comment->auteur(), PDO::PARAM_STR);
-    
-    
+      
         $executeIsOk = $this->_SqlRequest->execute();
 
         if(!$executeIsOk)
@@ -125,7 +118,7 @@ class CommentManager
         else
         {
             $id= $this->_bdd->lastInsertId();
-            $blog= $this->read($id);
+            //$blog= $this->read($id);
             return true;
         }   
     }
@@ -141,13 +134,22 @@ class CommentManager
         return $this->_SqlRequest->execute();
     } 
 
-    public function delete(Comment $comment)
+    public function delete($id)
     {
-        $this->_SqlRequest = $this->_bdd->prepare('DELETE FROM $comment WHERE id = :id LIMIT 1');
+        $this->_SqlRequest = $this->_bdd->prepare('DELETE FROM comment_to_validate WHERE id = :id');
 
-        $this->_SqlRequest->bindValue(':id', $comment->id(), PDO::PARAM_INT);
+        $this->_SqlRequest->bindValue(':id', $id, PDO::PARAM_INT);
     
-        return $this->_SqlRequest->execute();
+        $executeIsOk = $this->_SqlRequest->execute();
+
+        if($executeIsOk)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     } 
 
     public function setDb(PDO $bdd)

@@ -1,7 +1,7 @@
 <?php
 class BlogPost
 {         
-  private   $_id,
+    private   $_id,
             $_userId,
             $_author,
             $_title,
@@ -10,134 +10,130 @@ class BlogPost
             $_image,          
             $_dateDisplay;
 
-  public function __construct(array $donnees = null)
-  {
-    if ($donnees)
+    public function __construct(array $donnees = null)
     {
-      $this->hydrate($donnees);
+        if ($donnees)
+        {
+            $this->hydrate($donnees);
+        }   
     }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value)
+        {
+            $method = 'set'.ucfirst($key);
       
-  }
+            if (method_exists($this, $method))
+            {
+                $this->$method($value);
+            }
+        }
+    } 
 
-  public function hydrate(array $donnees)
-  {
-    foreach ($donnees as $key => $value)
+    public function id()
     {
-      $method = 'set'.ucfirst($key);
-      
-      if (method_exists($this, $method))
-      {
-        $this->$method($value);
-      }
+        return $this->_id;
     }
-  }
 
-  
+    public function userId()
+    {
+        return $this->_userId;
+    }
 
-  public function id()
-  {
-    return $this->_id;
-  }
+    public function author()
+    {
+        return $this->_author;
+    }
 
-  public function userId()
-  {
-    return $this->_userId;
-  }
+    public function title()
+    {
+        return $this->_title;
+    }
 
-  public function author()
-  {
-    return $this->_author;
-  }
+    public function chapo()
+    {
+        return $this->_chapo;
+    }
 
-  public function title()
-  {
-    return $this->_title;
-  }
+    public function content()
+    {
+        return $this->_content;
+    }
 
-  public function chapo()
-  {
-    return $this->_chapo;
-  }
+    public function image()
+    {
+        return $this->_image;
+    }
 
-  public function content()
-  {
-    return $this->_content;
-  }
+    public function dateDisplay()
+    {
+        return $this->_dateDisplay;
+    }
 
-  public function image()
-  {
-    return $this->_image;
-  }
-
-  public function dateDisplay()
-  {
-    return $this->_dateDisplay;
-  }
-
-  public function setId($id)
-  {
-    $id = (int) $id;
+    public function setId($id)
+    {
+        $id = (int) $id;
     
-    if ($id > 0)
-    {
-      $this->_id = $id;
+        if ($id > 0)
+        {
+            $this->_id = $id;
+        }
     }
-  }
 
-  public function setUserId($userId)
-  {
-    if (is_string($userId))
+    public function setUserId($userId)
     {
-      $this->_userId = $userId;
+        if (is_string($userId))
+        {
+            $this->_userId = $userId;
+        }
     }
-  }
 
-  public function setAuthor($author)
-  {
-    if (is_string($author))
+    public function setAuthor($author)
     {
-      $this->_author = $author;
+        if (is_string($author))
+        {
+            $this->_author = $author;
+        }
     }
-  }
 
-  public function setTitle($title)
-  {
-    if (is_string($title))
+    public function setTitle($title)
     {
-      $this->_title = $title;
+        if (is_string($title))
+        {
+            $this->_title = $title;
+        }
     }
-  }
 
-  public function setChapo($chapo)
-  {
-    if (is_string($chapo))
+    public function setChapo($chapo)
     {
-      $this->_chapo = $chapo;
+        if (is_string($chapo))
+        {
+            $this->_chapo = $chapo;
+        }
     }
-  }
 
-  public function setContent($content)
-  {
-    if (is_string($content))
+    public function setContent($content)
     {
-      $this->_content = $content;
+        if (is_string($content))
+        {
+            $this->_content = $content;
+        }
     }
-  }
 
-  public function setImage($image)
-  {
-    if (is_string($image))
+    public function setImage($image)
     {
-      $this->_image = $image;
+        if (is_string($image))
+        {
+            $this->_image = $image;
+        }
     }
-  }
 
-  public function setDate_display($dateDisplay)
-  {
-    
-    if (is_string($dateDisplay))
+    public function setDateDisplay($dateDisplay)
     {
-      $this->_dateDisplay = $dateDisplay;
+        if (is_string($dateDisplay))
+        {
+            $this->_dateDisplay = $dateDisplay;
+        }
     }
-  }
 }

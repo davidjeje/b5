@@ -92,11 +92,11 @@
 				   			</div>
 				   		</div>
 			   		</div>
-			   	</li>
+			   	</li> 
 			  	</ul>
 		  	</div>
 		</aside>
-
+ 
 		<div id="colorlib-contact">
 			<div class="container">
 				<div class="row">

@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -98,18 +97,16 @@
 		  	</div>
 		</aside>
 
-		<div id="colorlib-contact">
+		<div id="colorlib-contact"> 
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 animate-box">
 						<h2>Gérer mieux votre site</h2>
-
 						
 						<li><a href="index.php?page=vers_admin_ajout_blog">Ajouter un blog post</a></li>
 						<li class="has-dropdown active"><a href="index.php?page=vers_admin_modif_blog">Modifier un blog post</a></li>
 						<li class="has-dropdown"><a href="index.php?page=vers_admin_sup_blog">Suppprimer un blog post</a></li>
 						<li><a href="index.php?page=vers_la_validation_comment">Valider un commentaire</a></li>
-
 							
 					</div>
 				</div>

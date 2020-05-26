@@ -126,11 +126,8 @@
                                     <br/>
 
                                     <label for="content">Insérer le contenu du blog</label>
-                                    <textarea type="text" class="form-control" id="content" name="content"><?= $n['content']?></textarea>
+                                    <textarea type="text" class="form-control" id="content" name="content" value="<?= $n['content']?>"> </textarea>
                                     <br/>
-
-                                    
-
                                     
                                     <input type="submit" value="modifier" class="btn btn-primary">
 

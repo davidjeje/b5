@@ -1,5 +1,5 @@
 <?php
-function conect()
+function conect() 
 {
 	if (isset($_POST))
 	{

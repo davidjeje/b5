@@ -39,7 +39,7 @@ class BlogPostManager
         }
         return $this->_Objects;         
     } 
-  
+   
     public function read($id)
     {
         $this->_SqlRequest = $this->_bdd->prepare('SELECT * FROM blog_post WHERE id = :id');
@@ -60,13 +60,13 @@ class BlogPostManager
     public function create(BlogPost $blog)
     {
 
-        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO blog_post (id, author, title, chapo, content, date_display) VALUES (NULL, :author, :title, :chapo, :content, :date_display)');
+        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO blog_post (id, author, title, chapo, content, image, date_display) VALUES (NULL, :author, :title, :chapo, :content, :image, :date_display)');
 
         $this->_SqlRequest->bindValue(':author', $blog->author(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':title', $blog->title(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':chapo', $blog->chapo(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':content', $blog->content(), PDO::PARAM_STR);
-        // $this->_SqlRequest->bindValue(':image', $blog->image($image), PDO::PARAM_STR);
+        $this->_SqlRequest->bindValue(':image', $blog->image(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':date_display', $blog->dateDisplay(), PDO::PARAM_STR);
     
         $executeIsOk = $this->_SqlRequest->execute();
@@ -83,7 +83,7 @@ class BlogPostManager
         }   
     } 
 
-    public function update(BlogPost $blog)
+    public function update(BlogPost $blog, $id)
     {
     
         $this->_SqlRequest = $this->_bdd->prepare('UPDATE blog_post SET author = :author, title = :title, chapo = :chapo, content = :content WHERE id = :id LIMIT 1');
@@ -92,7 +92,7 @@ class BlogPostManager
         $this->_SqlRequest->bindValue(':title', $blog->title(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':chapo', $blog->chapo(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':content', $blog->content(), PDO::PARAM_STR);
-        $this->_SqlRequest->bindValue(':id', $blog->id(), PDO::PARAM_INT);
+        $this->_SqlRequest->bindValue(':id', $id, PDO::PARAM_INT);
     
         return $this->_SqlRequest->execute();
 
