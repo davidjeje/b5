@@ -101,7 +101,7 @@
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<h2>Valider ou non un commentaire</h2>
 							<div class="row contact-info-wrap">  
-								<?php 
+								<?php  
 								foreach ($readAll1 as $n)
 								{
 								?>

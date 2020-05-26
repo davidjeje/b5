@@ -1,6 +1,6 @@
 <?php
 function inserer_comment()
-{ 
+{  
 	if (isset($_GET['blog_post_id']) AND isset($_POST['auteur']) AND isset($_POST['message']))
 	{
 		// 1 : On force la conversion en nombre entier
