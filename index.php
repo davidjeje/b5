@@ -3,7 +3,7 @@
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
-
+//is_file('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php')
 if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or isset($_GET['id']))
 {
 	
@@ -107,26 +107,26 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
     {
         include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
-         inserer_comment_table();
+        inserer_comment_table();
     }
 
     elseif ($_GET['page'] == 'vers_la_sup_comment_table') 
     {
         include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
-         sup_comment_table();
+        sup_comment_table();
     }
 
      elseif ($_GET['page'] == 'vers_traitement_email') 
     {
         include('controleur/'.$_GET['page'].'.php');
-         envoyer_email();
+        envoyer_email();
     }
 
      elseif ($_GET['page'] == 'vers_connexion_user') 
     {
         include('controleur/'.$_GET['page'].'.php');
-         connexion_user();
+        connexion_user();
     }
 
     elseif ($_GET['page'] == 'vers_inserer_user') 

@@ -98,7 +98,7 @@
 					<div class="content">
 						
 						<article class="blog-entry">
-							<div class="blog-wrap">
+		 					<div class="blog-wrap">
 								<span class="category text-center"><a href="blog.html"><h1> <?php echo $read->title()?>  </h1></a></span>
 								<h2 class="text-center"><a href="blog.html"><h1> <?php echo $read->chapo()?>  </h1></a></h2>
 								<div class="blog-image">

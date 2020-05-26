@@ -11,7 +11,7 @@ function afficher_un_post()
 		{	
 			function chargerMaClasse($Managers) 
 			{
-    			require 'modele/' . $Managers . '.php';
+     			require 'modele/' . $Managers . '.php';
 			}
 			spl_autoload_register('chargerMaClasse');
 
@@ -30,7 +30,7 @@ function afficher_un_post()
 	}
 	else
 	{
-   		echo 'Il faut renseigner un nom, un prénom et un nombre de répétitions !';
+   		echo 'Impossible de voir le détail du blog !!!';
 	}
 	
 

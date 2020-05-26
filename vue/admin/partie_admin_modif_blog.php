@@ -92,11 +92,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="content">
-					<?php
+						<?php
 						foreach ($news as $n)
 
 						{
-					?>
+						?>
 						<article class="blog-entry">
 							<div class="blog-wrap">
 								<span class="category text-center"><a href="blog.html"><h1> <?php echo$n['title']?>  </h1></a></span>

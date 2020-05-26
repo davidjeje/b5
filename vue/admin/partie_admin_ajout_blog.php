@@ -118,7 +118,7 @@
                                     <label for="chapo">Chapo</label>
                                     <input type="text" class="form-control" id="chapo" name="chapo">
                                     <br/>
-
+ 
                                     <label for="content">Insérer le contenu du blog</label>
                                     <textarea type="text" class="form-control" id="content" name="content"></textarea>
                                     <br/>
