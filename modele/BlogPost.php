@@ -1,7 +1,7 @@
 <?php
 class BlogPost
 {         
-    private   $_id,
+    private $_id,
             $_userId,
             $_author,
             $_title,

@@ -125,15 +125,8 @@
 
                                     <label for="image">Sélectionner l'image</label>
                                     <input type="file" name="image" id= "image"/>
-                                    <br/>
-
-                                    <label for="change_date">Sélectionner la date d'aujoud'hui</label>
-                                    <input type="date" name="change_date" id="change_date">
-                                    <br/>
-
-                                    
-                                    <input type="submit" value="Ajouter" class="btn btn-primary">
-
+                                    <b/>                     
+                                   <input type="submit" value="Ajouter" class="btn btn-primary">
                             </form>
 						</div>
 					</div>

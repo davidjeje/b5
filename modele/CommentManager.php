@@ -15,15 +15,20 @@ class CommentManager
     }
   
     public function readAllC($blogPostId)
-    {     
-        $this->_SqlRequest = $this->_bdd->prepare('SELECT * FROM comment WHERE blog_post_id= :id');
+    {   
+        $this->_Objects = [];
+        $comments = [];
+
+        $this->_SqlRequest = $this->_bdd->prepare('SELECT * FROM comment WHERE blog_post_id = :id');
       
         $this->_SqlRequest->bindValue(':id', $blogPostId, PDO::PARAM_INT); 
         $executeIsOk = $this->_SqlRequest->execute();
 
+        $comments = $this->_SqlRequest->fetch(PDO::FETCH_ASSOC);
+
         if($executeIsOk)
         {
-            return new CommentValidate($this->_SqlRequest->fetch());
+            return $this->_Objects[] = new Comment($comments);
         }
         else
         {
@@ -82,7 +87,7 @@ class CommentManager
 
     public function create(CommentValidate $commentValidate, $blogPostId)
     {
-        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO comment_to_validate ( blog_post_id, message, auteur) VALUES (:blog_post_id, :message, :auteur)');
+        $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO comment_to_validate ( blog_post_id, message, auteur, date_display) VALUES (:blog_post_id, :message, :auteur, NOW())');
 
         $this->_SqlRequest->bindValue(':blog_post_id', $blogPostId, PDO::PARAM_INT);
         $this->_SqlRequest->bindValue(':message', $commentValidate->message(), PDO::PARAM_STR);
