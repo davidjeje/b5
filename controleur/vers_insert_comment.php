@@ -32,8 +32,8 @@ function inserer_comment()
 			
 			$create= $CommentManager->create($Comment, $BlogPostId);
 			//L'objet est bien créé car j'ai un boolean qui affiche true
-			var_dump($create);
-			die();
+			/*var_dump($create);
+			die();*/
 
 			include(dirname(__FILE__).'/../vue/message_traitement_envoi_comment.php');	
 		}

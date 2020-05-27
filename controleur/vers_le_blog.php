@@ -18,14 +18,15 @@ function afficher_un_post()
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
 			$BlogPostManager = new BlogPostManager($bdd);
-			$idd= $_GET['id'];
-			$read= $BlogPostManager->read($idd);
-			$readAll1= $BlogPostManager->readAll1();
+			$idd = $_GET['id'];
+			$read = $BlogPostManager->read($idd);
+			$readAll1 = $BlogPostManager->readAll1();
 			
-			$CommentManager= new CommentManager($bdd);
-			$readc= $CommentManager->readAllc($idd);
+			$CommentManager = new CommentManager($bdd);
 			
-			include(dirname(__FILE__).'/../vue/le_blog.php');
+			$readc = $CommentManager->readAllc($idd);
+			
+			include(dirname(__FILE__).'/../vue/le_blog.php');	
 		}
 	}
 	else

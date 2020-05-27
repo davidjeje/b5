@@ -33,7 +33,6 @@ function valide_ajout_blog()
                     $BlogPost->setChapo($_POST['chapo']);
                     $BlogPost->setContent($_POST['content']);
                     $BlogPost->setImage($path);
-                    $BlogPost->setDateDisplay($_POST['change_date']);
 
                     $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
@@ -41,7 +40,7 @@ function valide_ajout_blog()
 
                     $create= $BlogPostManager->create($BlogPost);
                                
-                    include(dirname(__FILE__).'/../admin/validation_blog_ajouter.php');
+                    include(dirname(__FILE__).'/../vue/admin/validation_blog_ajouter.php');
                 }                        
             }
         }
