@@ -104,38 +104,23 @@
 						<h2>Modifier un blog</h2>
 						<div class="row contact-info-wrap">
 							<form method="post" action="index.php?page=form_modif_valide" enctype="multipart/form-data">
-									
-							<?php
-							foreach ($ne as $n)
-
-							{
-							?>
-
-									<input type="hidden" name="id" value="<?= $n['id']?>">
-									<br/>
-                                    <label for="author">Auteur du blog</label>
-                                    <input type="text" class="form-control" name="author" id="author" placeholder="Auteur" value="<?= $n['author']?>">
-                                    <br/>
-
-                                    <label for="title">Titre du blog</label>
-                                    <input type="text" class="form-control" id="title" name="title" value="<?= $n['title']?>">
-                                    <br/>
-
-                                    <label for="chapo">Chapo</label>
-                                    <input type="text" class="form-control" id="chapo" name="chapo" value="<?= $n['chapo']?>">
-                                    <br/>
-
-                                    <label for="content">Insérer le contenu du blog</label>
-                                    <textarea type="text" class="form-control" id="content" name="content" value="<?= $n['content']?>"> </textarea>
-                                    <br/>
-                                    
-                                    <input type="submit" value="modifier" class="btn btn-primary">
-
-                            </form>
-                            <?php
-							}
-
-							?>
+								<input type="hidden" name="id" value="<?= $read->id()?>">
+								<br/>
+                                <label for="author">Auteur du blog</label>
+								<input type="hidden" name="id" value="<?= $read->id()?>">
+                                <input type="text" class="form-control" name="author" id="author" placeholder="Auteur" value=" <?=$read->author()?>">
+                                <br/>
+                                <label for="title">Titre du blog</label>
+                                <input type="text" class="form-control" id="title" name="title" value="<?= $read->title()?>">
+                                <br/>
+                                <label for="chapo">Chapo</label>
+                                <input type="text" class="form-control" id="chapo" name="chapo" value="<?= $read->chapo()?>">
+                                <br/>
+                                <label for="content">Insérer le contenu du blog</label>
+                                <textarea type="text" class="form-control" id="content" name="content" value=""><?= $read->content()?> </textarea>
+                                <br/>  
+                                <input type="submit" value="modifier" class="btn btn-primary">
+                            </form>  
 						</div>
 					</div>
 						
