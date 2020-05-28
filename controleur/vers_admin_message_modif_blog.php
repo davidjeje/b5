@@ -1,5 +1,5 @@
 <?php
-function valide_modif_blog()
+function valide_modif_blog() 
 {
 	if (isset($_GET['id']) )
 	{
@@ -24,7 +24,7 @@ function valide_modif_blog()
 
 			$read= $BlogPostManager->read($id);
 			
-			include(dirname(__FILE__).'/../admin/validation_blog_modif.php');
+			include(dirname(__FILE__).'/../vue/admin/validation_blog_modif.php');
 		}
 	}
 	else 

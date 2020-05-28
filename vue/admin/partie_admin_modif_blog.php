@@ -111,16 +111,7 @@
 								</ul>
 								</div>
 								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n['date_display']?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo$n['author']?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
-							</div>
-							<?=
-								$nn = $n[0];
-								$mm = $n[1];
-								$aa = $n[2];
-								$bb = $n[3];
-								$cc = $n[4];
-								$dd = $n[5];
-								$ee = $n[6];
-							?>
+							</div> 
 							
 					
 							<p class="text-center"><a href="index.php?page=vers_admin_message_modif_blog&amp;id=<?=$n['id']?>" class="btn btn-primary btn-custom">modifier</a><p>
