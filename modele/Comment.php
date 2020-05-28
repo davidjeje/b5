@@ -1,5 +1,5 @@
 <?php
-class Comment
+class Comment 
 {         
     private $_id,
             $_userId,
@@ -8,7 +8,7 @@ class Comment
             $_message,          
             $_dateDisplay;
 
-    public function __construct(array $donnees = null)
+    public function __construct( $donnees = null)
     {
         if ($donnees)
         {

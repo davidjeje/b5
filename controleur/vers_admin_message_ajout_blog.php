@@ -38,9 +38,16 @@ function valide_ajout_blog()
 
                     $BlogPostManager = new BlogPostManager($bdd);
 
-                    $create= $BlogPostManager->create($BlogPost);
-                               
-                    include(dirname(__FILE__).'/../vue/admin/validation_blog_ajouter.php');
+                    $create = $BlogPostManager->create($BlogPost);
+
+                    if($create == true)
+                    {
+                        include(dirname(__FILE__).'/../vue/admin/validation_blog_ajouter.php');
+                    }
+                    else
+                    {
+                        include(dirname(__FILE__).'/../vue/admin/partie_admin_ajout_blog.php');
+                    }                                                
                 }                        
             }
         }
