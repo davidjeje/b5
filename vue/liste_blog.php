@@ -95,10 +95,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="content">
-	 				<?php  
-					
+	 				<?php  		
 						foreach ($readAll as $n)
-
 						{
 					?>
 						<article class="blog-entry">

@@ -119,10 +119,11 @@
 								<h2 class="sidebar-heading">Commentaires</h2>
 								<blockquote>
 									<span class="category text-center">
-										<h1> <?php echo htmlspecialchars($readc->auteur())?></h1>
+										<h1><?php echo htmlspecialchars($readc->auteur());?>
+										</h1>
 									</span>
 									<span class="category text-center">
-										<h1><?php echo htmlspecialchars($readc->message())?></h1>
+										<h1><?php echo htmlspecialchars($readc->message());?></h1>
 									</span></br>
 								</blockquote>
 							</div> 

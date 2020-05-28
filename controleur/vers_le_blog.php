@@ -24,6 +24,7 @@ function afficher_un_post()
 			
 			$CommentManager = new CommentManager($bdd);
 			
+			$readc = [];
 			$readc = $CommentManager->readAllc($idd);
 			
 			include(dirname(__FILE__).'/../vue/le_blog.php');	
