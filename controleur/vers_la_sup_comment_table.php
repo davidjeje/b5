@@ -21,7 +21,14 @@ function sup_comment_table()
 			
 			$delete = $CommentManager->delete($_GET['id']);
 
-			include(dirname(__FILE__).'/../admin/comment_definitivement_supprimer.php');
+			if($delete == true)
+			{
+				include(dirname(__FILE__).'/../admin/comment_definitivement_supprimer.php');
+			}
+			else
+			{
+				include(dirname(__FILE__).'/../admin/erreur_comment_definitivement_supprimer.php');
+			}			
 		}
 	}
 	else

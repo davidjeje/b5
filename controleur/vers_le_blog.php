@@ -25,17 +25,20 @@ function afficher_un_post()
 			$CommentManager = new CommentManager($bdd);
 			
 			$readc = $CommentManager->readAllc($idd);
-			
-			include(dirname(__FILE__).'/../vue/le_blog.php');	
+
+			if ($readc == true)
+			{
+				include(dirname(__FILE__).'/../vue/le_blog.php');
+			}
+			else
+			{
+				include(dirname(__FILE__).'/../vue/liste_blog.php');
+			}				
 		}
 	}
 	else
 	{
    		echo 'Impossible de voir le détail du blog !!!';
 	}
-	
-
-};
-
-
+}
 ?>

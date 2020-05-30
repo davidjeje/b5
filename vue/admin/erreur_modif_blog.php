@@ -81,7 +81,7 @@
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
 				   							<h2></h2>
-				   							<h1>Modification éffectuée</h1>
+				   							<h1>Une erreur est survenue au moment de modifier le blog. Veuillez réitérer cette action.</h1>
 				   						</div>
 				   					</div>
 				   				</div>

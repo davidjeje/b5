@@ -19,23 +19,24 @@ function inserer_comment()
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
 			$BlogPostId = $_GET['blog_post_id']; 
-			//Je récupère bien $BlogPostId
+			
 			$Comment = new CommentValidate();
 			$Comment->setBlog_post_id($BlogPostId);	
 			$Comment->setAuteur($_POST['auteur']);
 			$Comment->setMessage($_POST['message']);
-			//Je vois clairement qu'un objet commentValidate est créé avec les 3 valeurs au dessus
-			/*var_dump($Comment);
-			die();*/
 			
-			$CommentManager= new CommentManager($bdd);
+			$CommentManager = new CommentManager($bdd);
 			
-			$create= $CommentManager->create($Comment, $BlogPostId);
-			//L'objet est bien créé car j'ai un boolean qui affiche true
-			/*var_dump($create);
-			die();*/
+			$create = $CommentManager->create($Comment, $BlogPostId);
 
-			include(dirname(__FILE__).'/../vue/message_traitement_envoi_comment.php');	
+			if($create == true)
+			{
+				include(dirname(__FILE__).'/../vue/message_traitement_envoi_comment.php');
+			}
+			else
+			{
+				include(dirname(__FILE__).'/../vue/erreur_traitement_envoi_comment.php');
+			}
 		}
 	}
 	else

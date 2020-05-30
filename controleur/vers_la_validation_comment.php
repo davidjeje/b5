@@ -13,6 +13,15 @@ function afficher_la_validation_comment()
 
 	$readAll1 = $commentManager->readAll1();
 
-	include(dirname(__FILE__).'/../vue/admin/partie_admin_comment.php');
+	if($readAll1 = true)
+	{
+		include(dirname(__FILE__).'/../vue/admin/partie_admin_comment.php');
+	}
+	else
+	{
+		include(dirname(__FILE__).'/../vue/admin/menu_partie_admin.php');
+	}
+
+	
 }
  

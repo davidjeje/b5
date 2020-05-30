@@ -1,5 +1,4 @@
 <?php 
-
 include(dirname(__FILE__).'/../modele/BlogPost.php');
 
 class BlogPostManager

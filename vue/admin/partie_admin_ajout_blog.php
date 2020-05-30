@@ -98,7 +98,7 @@
 		  	</div>
 		</aside>
 
-		<div id="colorlib-contact">
+		<div id="colorlib-contact"> 
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 animate-box">

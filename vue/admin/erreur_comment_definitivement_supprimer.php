@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Modification d'un blog</title>
+		<title>Validation de la suppression  du blog</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -19,6 +19,7 @@
 		<meta name="twitter:image" content="" />
 		<meta name="twitter:url" content="" />
 		<meta name="twitter:card" content="" />
+
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700" rel="stylesheet">
 	
@@ -80,26 +81,25 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
-				   							<h2></h2>
-				   							<h1>Modification éffectuée</h1>
+				   							<h1>Erreur impossible de supprimer le commentaire</h1>
 				   						</div>
 				   					</div>
 				   				</div>
-				   			</div>
+				   			</div>	
 			   			</li>
 			  		</ul>
 		  		</div>
 			</aside>
-
 			<div id="colorlib-contact">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 animate-box">
-							<h2>Modifier un blog</h2>
-							<div class="row contact-info-wrap">		
+							<div class="row contact-info-wrap"> 
+                            	<h3> Erreur impossible de supprimer le commentaire </h3>
+                            	<p class="text-center"><a href="index.php?page=vers_menu_admin_sans_passsword" class="btn btn-primary btn-custom">Cliquer ici pour revenir à la liste des blogs posts</a><p>
 							</div>
-						</div>		
-					</div>	
+						</div>	
+					</div>
 				</div>
 			</div>
 		</div>
@@ -191,8 +191,8 @@
 					<div class="col-md-12 text-center">
 						<p>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-     					<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
-    					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+     						<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
+    						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
 					</div>
 				</div>

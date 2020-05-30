@@ -110,7 +110,7 @@
 									<li><a href="#"><i class="icon-twitter"></i></a></li>
 									<li><a href="#"><i class="icon-googleplus"></i></a></li>
 								</ul>
-								</div>
+								</div>   
 								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo$n->author()?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
 							</div>
 							

@@ -93,16 +93,17 @@
 				<div class="row">
 					<div class="content">
 					<?php
-						foreach ($news as $n)
+					
+						foreach ($readAll as $n)
 
 						{
 					?>
 						<article class="blog-entry">
 							<div class="blog-wrap">
-								<span class="category text-center"><a href="blog.html"><h1> <?php echo$n['title']?>  </h1></a></span>
-								<h2 class="text-center"><a href="blog.html"><h1> <?php echo$n['chapo']?>  </h1></a></h2>
+								<span class="category text-center"><a href="blog.html"><h1> <?php echo$n->title()?>  </h1></a></span>
+								<h2 class="text-center"><a href="blog.html"><h1> <?php echo$n->chapo()?>  </h1></a></h2>
 								<div class="blog-image">
-									<a href="blog.html" class="blog-img text-center" style="background-image: url(<?php echo$n['image']?>);"><span><i class="icon-link"></i></span></a>
+									<a href="blog.html" class="blog-img text-center" style="background-image: url(<?php echo$n->image()?>);"><span><i class="icon-link"></i></span></a>
 									<ul class="share">
 									<li class="text-vertical"><i class="icon-share3"></i></li>
 									<li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -110,20 +111,12 @@
 									<li><a href="#"><i class="icon-googleplus"></i></a></li>
 								</ul>
 								</div>
-								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n['date_display']?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo$n['author']?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
+								<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo$n->author()?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
 							</div>
-							<?=
-								$nn = $n[0];
-								$mm = $n[1];
-								$aa = $n[2];
-								$bb = $n[3];
-								$cc = $n[4];
-								$dd = $n[5];
-								$ee = $n[6];
-							?>
+							
 							
 					
-							<p class="text-center"><a href="index.php?page=vers_admin_message_sup_blog&amp;id=<?=$n['id']?>" class="btn btn-primary btn-custom">Supprimer</a><p>
+							<p class="text-center"><a href="index.php?page=vers_admin_message_sup_blog&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">Supprimer</a><p>
 						</article>
 					<?php
 						}
@@ -138,17 +131,17 @@
 							
 						</div>
 						<?php
-						foreach ($news as $n)
+						foreach ($readAll as $n)
 
 						{
 						?>
 						<div class="side-wrap">
 							<h2 class="sidebar-heading">Post récent</h2>
 							<div class="f-entry">
-								<a href="#" class="featured-img" style="background-image: url(<?php echo$n[4]?>);"></a>
+								<a href="#" class="featured-img" style="background-image: url(<?php echo$n->image()?>);"></a>
 								<div class="desc">
-									<span><i class="icon-calendar3"></i> <?php echo$n['date_display']?></span>
-									<h3><a href="#"><?php echo$n[2]?> </a></h3>
+									<span><i class="icon-calendar3"></i> <?php echo$n->dateDisplay()?></span>
+									<h3><a href="#"><?php echo$n->author()?> </a></h3>
 								</div>
 							</div>
 						<?php
