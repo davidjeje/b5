@@ -118,80 +118,80 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="map" class="colorlib-map"></div>
-		<div id="colorlib-subscribe">
-			<div class="overlay"></div>	
-		</div>
-		<footer id="colorlib-footer" role="contentinfo">
-			<div class="container">
-                <div class="row row-pb-md">
-                    <div class="col-md-4">
-                        <h2>Navigation</h2>
-                        <p>
-                            <ul class="colorlib-footer-links">
-                                <li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                <li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                <li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>    
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2>D'autre thème vont être abordé</h2>
-                        <ul class="colorlib-footer-links">
-                            <li>
-                                <span>1. L’intelligence artificielle standardisée
+		
+			<div id="colorlib-subscribe">
+				<div class="overlay"></div>	
+			</div>
+			<footer id="colorlib-footer" role="contentinfo">
+				<div class="container">
+                	<div class="row row-pb-md">
+                    	<div class="col-md-4">
+                        	<h2>Navigation</h2>
+                        	<p>
+                            	<ul class="colorlib-footer-links">
+                                	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
+                                	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
+                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
+                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>    
+                            	</ul>
+                        	</p>
+                    	</div>
+                    	<div class="col-md-4">
+                        	<h2>D'autre thème vont être abordé</h2>
+                        	<ul class="colorlib-footer-links">
+                            	<li>
+                                	<span>1. L’intelligence artificielle standardisée
 
-								Maintenant qu’il est possible de développer certaines des intelligences artificielles les plus avancées du marché en quelques heures sur son propre ordinateur avec un cadre en open source, l’IA va devenir omniprésente. Les logiciels seront plus intelligents et plus performants dans le traitement du langage naturel, de la vision informatique, des systèmes de recommandations et ils seront plus faciles à développer en CMS – Carson Kahn.</span>    
-                            </li>
-                            <li>
-                                <span>2. Les chatbots
+									Maintenant qu’il est possible de développer certaines des intelligences artificielles les plus avancées du marché en quelques heures sur son propre ordinateur avec un cadre en open source, l’IA va devenir omniprésente. Les logiciels seront plus intelligents et plus performants dans le traitement du langage naturel, de la vision informatique, des systèmes de recommandations et ils seront plus faciles à développer en CMS – Carson Kahn.</span>    
+                            	</li>
+                            	<li>
+                                	<span>2. Les chatbots
 
-								Nous verrons davantage de chatbots et nous devrons apprendre à interagir avec. Nous pourrons ainsi leur apprendre ce que nous attendons d’eux – Chalmers Brown, Due.</span>
-                            </li>
-                            <li>
-                                <span>3. La place grandissante de l’éthique dans le secteur de l’innovation technologique
+									Nous verrons davantage de chatbots et nous devrons apprendre à interagir avec. Nous pourrons ainsi leur apprendre ce que nous attendons d’eux – Chalmers Brown, Due.</span>
+                            	</li>
+                            	<li>
+                                	<span>3. La place grandissante de l’éthique dans le secteur de l’innovation technologique
 
-								Nous nous heurtons aux dilemmes éthiques qui sont liés directement à ce que nous créons et comment nous le créons : en orientant des publicités en fonction des facteurs démographiques, l’angoisse de l’automatisation des emplois, le revenu universel et même la fréquence du harcèlement sexuel. Le secteur de la tech évolue plus rapidement que les systèmes éthiques qui l’encadrent – Kieran Snyder, Textio.</span>
-                            </li>
-                            <li>
-                                <span>4.La réalité augmentée
+									Nous nous heurtons aux dilemmes éthiques qui sont liés directement à ce que nous créons et comment nous le créons : en orientant des publicités en fonction des facteurs démographiques, l’angoisse de l’automatisation des emplois, le revenu universel et même la fréquence du harcèlement sexuel. Le secteur de la tech évolue plus rapidement que les systèmes éthiques qui l’encadrent – Kieran Snyder, Textio.</span>
+                            	</li>
+                            	<li>
+                                	<span>4.La réalité augmentée
 
-								Snapchat a aidé à la démocratisation de la réalité augmentée grâce à ses filtres amusants. Plus récemment, Apple a présenté ARKit, permettant de faciliter l’intégration de la réalité augmentée dans les applications pour iPhones et des entreprises comme Amazon l’on déjà adopté. Je pense que 2018 sera sous le signe de la réalité augmentée – Thomas Griffin, OptinMonster.</span>                                
-                            </li>
-                            <li>
-                                <span>5. Des fonctionnalités d’équipements informatiques et de logiciels compatibles avec la réalité augmentée et le machine learning
+									Snapchat a aidé à la démocratisation de la réalité augmentée grâce à ses filtres amusants. Plus récemment, Apple a présenté ARKit, permettant de faciliter l’intégration de la réalité augmentée dans les applications pour iPhones et des entreprises comme Amazon l’on déjà adopté. Je pense que 2018 sera sous le signe de la réalité augmentée – Thomas Griffin, OptinMonster.</span>                                
+                            	</li>
+                            	<li>
+                                	<span>5. Des fonctionnalités d’équipements informatiques et de logiciels compatibles avec la réalité augmentée et le machine learning
 
-								Bon nombre d’entreprises produisent des fonctionnalités d’équipements et des logiciels compatibles avec la réalité augmentée et le machine learning. Les développeurs savent tirer profit de ces puces et API pour créer des applications permettant de voir le monde différemment et de mieux communiquer avec les machines. Je prédis également que les nouvelles technologies seront utilisées pour contrôler la sécurité, aider à regrouper le big data et à améliorer les processus d’authentification – Chris Kirby, Voices.com.</span>      
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-md-push-1">
-                        <h2>Tags</h2>
-                        <p class="tags">
-                            <span><a href="#"><i class="icon-tag"></i> Métier du web</a></span>
-                            <span><a href="#"><i class="icon-tag"></i> Robot et nouvelle technologie</a></span>
-                            <span><a href="#"><i class="icon-tag"></i> Transhumaniste </a></span>
-                            <span><a href="#"><i class="icon-tag"></i> Futur de l'homme</a></span>
-                            <span><a href="#"><i class="icon-tag"></i> Le web est il au géant du web ?</a></span>   
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        	<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
-                        	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-		</footer>
+									Bon nombre d’entreprises produisent des fonctionnalités d’équipements et des logiciels compatibles avec la réalité augmentée et le machine learning. Les développeurs savent tirer profit de ces puces et API pour créer des applications permettant de voir le monde différemment et de mieux communiquer avec les machines. Je prédis également que les nouvelles technologies seront utilisées pour contrôler la sécurité, aider à regrouper le big data et à améliorer les processus d’authentification – Chris Kirby, Voices.com.</span>      
+                            	</li>
+                        	</ul>
+                    	</div>
+                    	<div class="col-md-4 col-md-push-1">
+                        	<h2>Tags</h2>
+                        	<p class="tags">
+                            	<span><a href="#"><i class="icon-tag"></i> Métier du web</a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Robot et nouvelle technologie</a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Transhumaniste </a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Futur de l'homme</a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Le web est il au géant du web ?</a></span>   
+                        	</p>
+                    	</div>
+                	</div>
+                	<div class="row">
+                    	<div class="col-md-12">
+                        	<p>
+                                <!-- Information on when the project was carried out and who carried it out. -->
+                                <small class="block">I am David Marivat and we are in&copy; <script>document.write(new Date().getFullYear());</script> 
+                                and the project was carried out in 2018. Throughout these years I have made improvements to the code.<i class="icon-heart3" aria-hidden="true"></i></small>
+                            </p>
+                    	</div>
+                	</div>
+            	</div>
+			</footer>
 
-		<div class="gototop js-top">
-			<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+			<div class="gototop js-top">
+				<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+			</div>
 		</div>
 	
 		<!-- jQuery -->

@@ -6,11 +6,11 @@ function valide_modif_blog_form()
   		require 'modele/' . $classe . '.php';
 	} 
 	spl_autoload_register('chargerClasse');
- 
+  
 	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
 	$BlogPostManager = new BlogPostManager($bdd);
-	$id = $_POST['id'];
+	$id = $_POST['id']; 
 
 	$blog = new BlogPost();
 	$blog->setAuthor($_POST['author']);
@@ -26,8 +26,7 @@ function valide_modif_blog_form()
 	}
 	else
 	{
-		include(dirname(__FILE__).'/../vue/admin/menu_partie_admin.php');
-		echo "Le blog n'a pas pu etre modifier. Reéssayer ultèrieurement !!!"
+		include(dirname(__FILE__).'/../vue/admin/erreur_modif_blog.php');
 	}	
-}
+};
 ?>

@@ -12,7 +12,7 @@ function sup_comment_table()
 			function chargerClasse($classname)
 			{
   				require  'modele/' .$classname.'.php';
-			}
+			} 
 			spl_autoload_register('chargerClasse');
 
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
@@ -21,13 +21,13 @@ function sup_comment_table()
 			
 			$delete = $CommentManager->delete($_GET['id']);
 
-			if($delete == true)
+			if($delete == true) 
 			{
-				include(dirname(__FILE__).'/../admin/comment_definitivement_supprimer.php');
+				include(dirname(__FILE__).'/../vue/admin/comment_definitivement_supprimer.php');
 			}
 			else
 			{
-				include(dirname(__FILE__).'/../admin/erreur_comment_definitivement_supprimer.php');
+				include(dirname(__FILE__).'/../vue/admin/erreur_comment_definitivement_supprimer.php');
 			}			
 		}
 	}

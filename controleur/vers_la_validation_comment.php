@@ -21,7 +21,5 @@ function afficher_la_validation_comment()
 	{
 		include(dirname(__FILE__).'/../vue/admin/menu_partie_admin.php');
 	}
-
-	
 }
  

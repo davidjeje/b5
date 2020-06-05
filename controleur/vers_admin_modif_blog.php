@@ -3,7 +3,7 @@ function afficher_modif_blog()
 {	
 	function chargerClasse($classname) 
 	{
-  		require 'modele/' . $classe . '.php';
+  		require 'modele/' . $classe . '.php'; 
 	}
 	spl_autoload_register('chargerClasse');
 
@@ -21,5 +21,5 @@ function afficher_modif_blog()
 	{
 		include(dirname(__FILE__).'/../vue/admin/erreur_partie_admin_modif_blog.php');
 	}
-} 
+}; 
 ?>

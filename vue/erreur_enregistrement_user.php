@@ -1,9 +1,12 @@
+<?php
+//session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Modification d'un blog</title>
+		<title>Message d'erreur d'inscription d'un visiteur</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -53,18 +56,20 @@
 		<![endif]-->
 	</head>
 	<body>	
-		<div class="colorlib-loader"></div>
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="colorlib-logo">David Marivat</div>
+								<div id="colorlib-logo">
+									David Marivat
+								</div>
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Gestion des blogs</a></li>	
+									<li><a href="index.php">Accueil</a></li>
+                                	<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>		
 								</ul>
 							</div>
 						</div>
@@ -80,11 +85,11 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
-				   							<h1>Une erreur c'est produite. La modification du blog n'a pas fonctionné. Veuillez recommencer ultèrieurement pour modifier ce blog</h1>
+				   							<h1>L'inscription ne c'est pas bien déroulée. Veuillez recommencer ultèrieurement.</h1>
 				   						</div>
 				   					</div>
 				   				</div>
-				   			</div>
+				   			</div> 
 			   			</li>
 			  		</ul>
 		  		</div>
@@ -98,8 +103,7 @@
                                 <ul class="colorlib-footer-links">
                                     <li><a href="index.php"><i class="icon-check"></i> Accueil</a></li>
                                     <li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                    <li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                    <li><a href="index.php?page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Gestion des blogs</a></li>     
+                                    <li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>     
                                 </ul>
                             </p>
                         </div>

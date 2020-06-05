@@ -5,8 +5,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
 //is_file('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php')
 if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or isset($_GET['id']))
-{
-	
+{	
 	if ($_GET['page'] == 'vers_liste_blog') 
     {
         include('modele/BlogPostManager.php');
@@ -19,8 +18,7 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
         include('modele/BlogPostManager.php');
         include('modele/CommentManager.php');
         include('controleur/'.$_GET['page'].'.php');
-        afficher_un_post();
-        
+        afficher_un_post();       
     }
 
     elseif ($_GET['page'] == 'vers_la_connexion_admin') 

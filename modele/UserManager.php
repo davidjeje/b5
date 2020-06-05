@@ -12,7 +12,7 @@ class UserManager
         $this->setDb($bdd);
     }
   
-    public function readAll()
+    public function readAll() 
     {
 
         $this->_Objects = [];
@@ -25,10 +25,39 @@ class UserManager
             $this->_Objects[] = new User($users);
         }
         return $this->_Objects;         
+    }  
+
+    public function passwordAll() 
+    {
+        $this->_Objects = [];
+        $users = [];
+
+        $this->_SqlRequest = $this->_bdd->query('SELECT password FROM user');
+      
+        while ($users = $this->_SqlRequest->fetch(PDO::FETCH_ASSOC)) 
+        {
+            $this->_Objects[] = new User($users);
+        }
+        return $this->_Objects;         
+    }   
+
+    public function emailList($email) 
+    {
+        $this->_SqlRequest = $this->_bdd->prepare('SELECT * FROM user WHERE email = :email');
+      
+        $this->_SqlRequest->bindValue(':email', $email, PDO::PARAM_STR);
+        $executeIsOk = $this->_SqlRequest->execute();
+
+        if($executeIsOk)
+        { 
+            return new user($this->_SqlRequest->fetch());
+        }
+        else
+        {
+            return false;
+        }               
     } 
 
-  
-  
     public function read($pseudo)
     {
         $this->_SqlRequest = $this->_bdd->prepare('SELECT * FROM user WHERE pseudo = :pseudo');
@@ -46,7 +75,6 @@ class UserManager
         }       
     } 
 
-
     public function create(User $user)
     {
 
@@ -56,7 +84,16 @@ class UserManager
         $this->_SqlRequest->bindValue(':pseudo', $user->pseudo(), PDO::PARAM_STR);
         $this->_SqlRequest->bindValue(':email', $user->email(), PDO::PARAM_STR);
     
-        $executeIsOk = $this->_SqlRequest->execute();  
+        $executeIsOk = $this->_SqlRequest->execute(); 
+
+        if(!$executeIsOk)
+        {
+            return false;
+        } 
+        else
+        {
+            return true;
+        }   
     } 
 
     public function setDb(PDO $bdd)

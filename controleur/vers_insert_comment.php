@@ -20,7 +20,7 @@ function inserer_comment()
 
 			$BlogPostId = $_GET['blog_post_id']; 
 			
-			$Comment = new CommentValidate();
+			$Comment = new CommentValidate(); 
 			$Comment->setBlog_post_id($BlogPostId);	
 			$Comment->setAuteur($_POST['auteur']);
 			$Comment->setMessage($_POST['message']);

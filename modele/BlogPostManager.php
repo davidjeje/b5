@@ -1,5 +1,5 @@
 <?php 
-include(dirname(__FILE__).'/../modele/BlogPost.php');
+include(dirname(__FILE__).'/../modele/BlogPost.php'); 
 
 class BlogPostManager
 {
@@ -58,7 +58,6 @@ class BlogPostManager
 
     public function create(BlogPost $blog)
     {
-
         $this->_SqlRequest = $this->_bdd->prepare('INSERT INTO blog_post (id, author, title, chapo, content, image, date_display) VALUES (NULL, :author, :title, :chapo, :content, :image, NOW())');
 
         $this->_SqlRequest->bindValue(':author', $blog->author(), PDO::PARAM_STR);

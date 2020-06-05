@@ -168,10 +168,10 @@
                 	<div class="row">
                     	<div class="col-md-12">
                         	<p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        	<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
-                        	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        	</p>
+                                <!-- Information on when the project was carried out and who carried it out. -->
+                                <small class="block">I am David Marivat and we are in&copy; <script>document.write(new Date().getFullYear());</script> 
+                                and the project was carried out in 2018. Throughout these years I have made improvements to the code.<i class="icon-heart3" aria-hidden="true"></i></small>
+                            </p>
                     	</div>
                 	</div>
             	</div>
