@@ -14,23 +14,15 @@ function inserer_comment_table()
 
 	$_GET['id'] = (int) $_GET['id'];
 	$id = $_GET['id'];
-	/*var_dump($id);
-    die();*/
-
+	
 	$Comment = new Comment();
 	$Comment->setBlog_post_id($blogPostId);
     $Comment->setAuteur($_GET['auteur']);  
     $Comment->setMessage($_GET['message']);  
-    /*var_dump($Comment);
-    die();*/
 
 	$CommentManager = new CommentManager($bdd);
-	/*var_dump($CommentManager);
-	die();*/
 
 	$birth = $CommentManager->birth($Comment, $blogPostId);
-	/*var_dump($birth);
-	die();*/
 
 	if ($birth == true)
 	{
@@ -38,9 +30,9 @@ function inserer_comment_table()
 	}
 	else
 	{
-		return false;
+		include(dirname(__FILE__).'/../vue/admin/menu_partie_admin.php');
 	}
 
 	include(dirname(__FILE__).'/../vue/admin/comment_definitivement_valider.php');
-}
+} 
 ?>

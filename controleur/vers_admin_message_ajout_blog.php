@@ -14,12 +14,10 @@ function valide_ajout_blog()
             if (in_array($extension_upload, $extensions_autorisees))
             {
                 // On peut valider le fichier et le stocker définitivement
-                $resultat= move_uploaded_file($_FILES['image']['tmp_name'], 'public/images/' . $image);
+                $resultat = move_uploaded_file($_FILES['image']['tmp_name'], 'public/images/' . $image);
                 $path = 'public/images/'. $image;
                 
-                //$dat= new date();
-                
-                if ($resultat)
+                if ($resultat) 
                 {
                     function chargerClasse($classname)
                     {
@@ -28,8 +26,8 @@ function valide_ajout_blog()
                     spl_autoload_register('chargerClasse');
                                                    
                     $BlogPost= new BlogPost();
-                    $BlogPost->setAuthor($_POST['author']);
-                    $BlogPost->setTitle($_POST['title']);
+                    $BlogPost->setAuthor($_POST['author']); 
+                    $BlogPost->setTitle($_POST['title']);  
                     $BlogPost->setChapo($_POST['chapo']);
                     $BlogPost->setContent($_POST['content']);
                     $BlogPost->setImage($path);
@@ -46,7 +44,7 @@ function valide_ajout_blog()
                     }
                     else
                     {
-                        include(dirname(__FILE__).'/../vue/admin/partie_admin_ajout_blog.php');
+                        include(dirname(__FILE__).'/../vue/admin/erreur_blog_ajouter.php');
                     }                                                
                 }                        
             }

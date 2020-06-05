@@ -1,13 +1,13 @@
 <?php
 class User
 {
-    private $_role,
-            $_id,
+    private $_id,
+            $_role,
             $_password,
             $_email,
             $_pseudo;
 
-    public function __construct(array $donnees = null)
+    public function __construct( $donnees = null)
     {
         if ($donnees)
         {

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Modification d'un blog</title>
+		<title>Erreur validation d'un blog</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -79,7 +79,7 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
-				   							<h1>Commentaire supprimé.</h1>
+				   							<h1>Une erreur c'est produite. La suppression du blog n'a pas fonctionné. Veuillez recommencer ultèrieurement pour supprimer ce blog</h1>
 				   						</div>
 				   					</div>
 				   				</div>

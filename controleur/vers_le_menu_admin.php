@@ -11,7 +11,6 @@ function conect()
 				include(dirname(__FILE__).'/../admin/menu_partie_admin.php');		
 			}
 		}
-
 	}	
 	else
 	{
@@ -19,8 +18,4 @@ function conect()
 	}
 }
 
-function conec()
-{
-	include(dirname(__FILE__).'/../vue/conexion.php');
-}
 ?>

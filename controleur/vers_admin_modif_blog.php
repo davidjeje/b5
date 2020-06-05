@@ -1,9 +1,9 @@
 <?php
 function afficher_modif_blog()
 {	
-	function chargerClasse($classname)
+	function chargerClasse($classname) 
 	{
-  		require 'modele/' . $classe . '.php';
+  		require 'modele/' . $classe . '.php'; 
 	}
 	spl_autoload_register('chargerClasse');
 
@@ -11,8 +11,15 @@ function afficher_modif_blog()
 
 	$BlogPostManager = new BlogPostManager($bdd);
 
-	$readAll= $BlogPostManager->readAll();
+	$readAll = $BlogPostManager->readAll();
 
-	include(dirname(__FILE__).'/../admin/partie_admin_modif_blog.php');
-}
+	if($readAll)
+	{
+		include(dirname(__FILE__).'/../vue/admin/partie_admin_modif_blog.php');
+	}
+	else
+	{
+		include(dirname(__FILE__).'/../vue/admin/erreur_partie_admin_modif_blog.php');
+	}
+}; 
 ?>

@@ -53,6 +53,7 @@
 		<![endif]-->
 	</head>
 	<body>	
+		<div class="colorlib-loader"></div>
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
@@ -79,7 +80,7 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
-				   							<h1>Commentaire supprimé.</h1>
+				   							<h1>Une erreur c'est produite. La modification du blog n'a pas fonctionné. Veuillez recommencer ultèrieurement pour modifier ce blog</h1>
 				   						</div>
 				   					</div>
 				   				</div>

@@ -63,7 +63,7 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Gestion des blogs</a></li>	
+									<li><a href=" index.php?page=vers_menu_admin_sans_passsword">Gestion des blogs</a></li>	
 								</ul>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
-				   							<h1>Commentaire supprimé.</h1>
+				   							<h1>Une erreur c'est produite. Impossible de supprimer le commentaire. Veuillez recommencer ultèrieurement.</h1>
 				   						</div>
 				   					</div>
 				   				</div>

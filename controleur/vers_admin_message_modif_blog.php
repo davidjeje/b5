@@ -18,13 +18,20 @@ function valide_modif_blog()
 			
 			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
-			$BlogPostManager= new BlogPostManager($bdd);
+			$BlogPostManager = new BlogPostManager($bdd);
 
-			$id= $_GET['id'];
+			$id = $_GET['id'];
 
-			$read= $BlogPostManager->read($id);
+			$read = $BlogPostManager->read($id);
 			
-			include(dirname(__FILE__).'/../vue/admin/validation_blog_modif.php');
+			if($read == true) 
+			{
+				include(dirname(__FILE__).'/../vue/admin/validation_blog_modif.php');
+			}
+			else
+			{
+				include(dirname(__FILE__).'/../vue/admin/erreur_validation_blog_modif.php');
+			}
 		}
 	}
 	else 
