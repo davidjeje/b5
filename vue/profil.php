@@ -1,3 +1,13 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) 
+{
+    session_start();
+} 
+/*require 'functions/auth.php';
+var_dump(est_connecte());
+exist();
+die();*/
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -95,7 +105,8 @@
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<div class="row contact-info-wrap"> 
                          		<p> 
-                         			Bonjour <?php echo $_SESSION['pseudo'];?></p>
+                         			Bonjour <?php echo $_SESSION['pseudo'];?>
+                         		</p>
 				   				<p> ton id est <?php echo $_SESSION['id'];?></p>
 				   				<ul>
 				   					<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>

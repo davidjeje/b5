@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) 
+{
+    session_start();
+} 
+
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -72,9 +79,7 @@
 							<ul>
 								<li><a href="index.php">Accueil</a></li>
 								<li class="has-dropdown active"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
-								<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>
-								
-								
+								<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>				
 							</ul>
 						</div>
 					</div>
@@ -94,6 +99,9 @@
 		<div id="colorlib-container">
 			<div class="container">
 				<div class="row">
+					<p> 
+                        Bonjour <?php echo $_SESSION['pseudo'];?>
+                    </p>
 					<div class="content">
 	 				<?php  		
 						foreach ($readAll as $n)

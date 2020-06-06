@@ -4,15 +4,15 @@ function inserer_user()
 {
 	if (isset($_POST['ok']))
 	{
-        $pseudo = $_POST['prenom'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
+        $pseudo = htmlspecialchars($_POST['prenom']);
+        $password = htmlspecialchars($_POST['password']);
+        $email = htmlspecialchars($_POST['email']);
 
-        if (!empty($pseudo))
+        if (!empty($pseudo) and preg_match('/^[a-zA-Z0-9]+$/', $pseudo))
         {
             if (!empty($password))
             {
-                if (!empty($email))
+                if (!empty($email) and filter_var($email, FILTER_VALIDATE_EMAIL))
                 {
                     function chargerClasse($classname)
                     {
@@ -29,7 +29,7 @@ function inserer_user()
                     //J'affiche le mail via la méthode situé dans l'entité User
                     $useEmail = $emailList->email();
                     
-                    $pass = password_hash($password, PASSWORD_DEFAULT);
+                    $pass = password_hash($password, PASSWORD_BCRYPT);
 
                     if(isset($emailList) and $useEmail == null)
                     { 

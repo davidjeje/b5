@@ -1,5 +1,14 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) 
+{
+    session_start(); 
+}
 //session_start();
+//require 'functions/auth.php';
+//var_dump(est_connecte());
+//unset($_SESSION['connecte']);
+//exit();
+//die();
 function connexion_user1()
 {
 	if (isset($_POST['connexion']))
@@ -22,12 +31,13 @@ function connexion_user1()
             $read = $UserManager->read($pseud);
             /*var_dump($read);
             die();*/
+            $PassDataBase = $read->password();
                         
-            if ( $read->password() == $pass)
+            if (password_verify($pass, $PassDataBase))
             {   
-                $_SESSION['id']= $read->id();
-                $_SESSION['pseudo']= $read->pseudo();
-                $_SESSION['email']= $read->email();
+                $_SESSION['id'] = $read->id();
+                $_SESSION['pseudo'] = $read->pseudo();
+                $_SESSION['email'] = $read->email();
                 include(dirname(__FILE__).'/../vue/profil.php');
             }
             else

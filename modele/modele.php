@@ -15,7 +15,7 @@ class BlogManager
     $this->_bdd = $bdd;
   }
   public function getList($manager)
-  {
+  { 
   $news= array();
   $req= $bdd ->query('SELECT id, author, title, chapo, content, image, date_display FROM blog_post');
   while ($data = $req->fetchall()) 
