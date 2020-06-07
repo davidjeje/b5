@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) 
+{
+    session_start();
+} 
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -65,7 +71,7 @@
 								<ul>
 									<li><a href="index.php">Accueil</a></li>
                                 	<li class="has-dropdown"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>	
+                                	<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
 								</ul>
 							</div>
 						</div>
@@ -80,32 +86,14 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text ">
 				   					<div class="slider-text-inner text-center">
-				   						<h1>Vous êtes connecté à votre partie utilisateur</h1>
+				   						<h1><p>Bonjour <?php echo $_SESSION['pseudo'];?></p> vous êtes connecté à votre partie utilisateur</h1>
 				   					</div>	
 				   				</div>
 				   			</div>		
 			   			</li>
 			  		</ul>
 		  		</div>
-			</aside>
-
-			<div id="colorlib-contact">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1 animate-box">
-							<div class="row contact-info-wrap"> 
-                         		<p> 
-                         			Bonjour <?php echo $_SESSION['pseudo'];?></p>
-				   				<p> ton id est <?php echo $_SESSION['id'];?></p>
-				   				<ul>
-				   					<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
-				   				</ul>				
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+			</aside> 
 		
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
@@ -116,8 +104,7 @@
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
                                 	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>   
+                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
                             	</ul>
                         	</p>
                     	</div>
