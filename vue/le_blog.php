@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) 
+{
+    session_start();
+}  
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -71,7 +77,20 @@
 								<ul>
 									<li><a href="index.php">Accueil</a></li>
 									<li class="has-dropdown active"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
-									<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>		
+									<?php 
+                                    if(empty($_SESSION))
+                                    {
+                                    ?>
+                                        <li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>
+                                    <?php
+                                    }
+                                    else
+                                    {
+                                    ?>
+                                        <li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
+                                    <?php
+                                    }
+                                    ?>   
 								</ul>
 							</div>
 						</div>
@@ -87,7 +106,6 @@
 					</div>
 				</div>
  			</aside>
-
 			<div id="colorlib-container">
 				<div class="container">
 					<div class="row">
@@ -138,12 +156,9 @@
                                     <label for="content">Commentaire</label>
                                     <textarea type="text" class="form-control" id="content" name="message"></textarea>
                                     <br/> 
-                                    <input type="submit" value="valider" class="btn btn-primary">
-                                    
+                                    <input type="submit" value="valider" class="btn btn-primary">          
                             	</form>
-                            	<?php
-							
-								?>
+                            	
 								<h2 class="sidebar-heading">Video Post</h2>
 								<div class="video colorlib-video" style="background-image: url(public/images/info.jpg);">
 									<a href="https://www.youtube.com/watch?v=bOjbaNfHuBk" class="popup-vimeo"><i class="icon-play"></i></a>
@@ -156,16 +171,6 @@
 								</blockquote>
 							</div>
 						</div>
-						<aside class="sidebar">
-							<div class="side-wrap">	
-							</div>
-							<div class="side-wrap">	
-							</div>
-							<div class="side-wrap">	
-							</div>
-							<div class="side">	
-							</div>
-						</aside>
 					</div>
 				</div>
 			</div>
@@ -205,11 +210,31 @@
 							<p>
 								<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Accueil</a></li>
-                                	<li><a href="index.php?page=news"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                	<li><a href="index.php?page=news"><i class="icon-check"></i> Blog post</a></li> 
+                                	<?php 
+                                        if(empty($_SESSION))
+                                        {
+                                        ?>
+                                            <li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
+                                        <?php
+                                        }
+                                        else
+                                        {
+                                        ?>
+                                            <li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
+                                        <?php
+                                        }
+                                        ?>   
+                                        <?php 
+                                        if(empty($_SESSION))
+                                        {
+                                        ?> 
+                                            <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                        <?php
+                                        }
+                                        ?>    
                             	</ul>
-							</p>
+							</p> 
 						</div>
 						<div class="col-md-4">
 							<h2>D'autre thème vont être abordé</h2>

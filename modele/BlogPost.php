@@ -1,5 +1,5 @@
 <?php
-class BlogPost 
+class BlogPost  
 {         
     private $_id, 
             $_userId,

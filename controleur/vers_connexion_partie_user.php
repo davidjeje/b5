@@ -3,12 +3,6 @@ if (session_status() == PHP_SESSION_NONE)
 {
     session_start(); 
 }
-//session_start();
-//require 'functions/auth.php';
-//var_dump(est_connecte());
-//unset($_SESSION['connecte']);
-//exit();
-//die();
 function connexion_user1()
 {
 	if (isset($_POST['connexion']))
@@ -29,8 +23,7 @@ function connexion_user1()
             $UserManager = new UserManager($bdd);
                         
             $read = $UserManager->read($pseud);
-            /*var_dump($read);
-            die();*/
+            
             $PassDataBase = $read->password();
                         
             if (password_verify($pass, $PassDataBase))

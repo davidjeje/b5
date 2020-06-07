@@ -25,7 +25,7 @@ function valide_ajout_blog()
                     }
                     spl_autoload_register('chargerClasse');
                                                    
-                    $BlogPost= new BlogPost();
+                    $BlogPost= new BlogPost(); 
                     $BlogPost->setAuthor($_POST['author']); 
                     $BlogPost->setTitle($_POST['title']);  
                     $BlogPost->setChapo($_POST['chapo']);
