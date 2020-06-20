@@ -26,7 +26,7 @@ class BlogPostManager
         return $this->_Objects;         
     } 
 
-    public function readAll1()
+    public function readAll1() 
     {
         $this->_Objects = [];
         $blogs = [];

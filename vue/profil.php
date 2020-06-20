@@ -99,7 +99,7 @@ if (session_status() == PHP_SESSION_NONE)
 				<div class="container">
                 	<div class="row row-pb-md">
                     	<div class="col-md-4">
-                        	<h2>Navigation</h2>
+                        	<h2>Navigation</h2> 
                         	<p>
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>

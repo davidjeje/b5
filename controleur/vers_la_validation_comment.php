@@ -1,4 +1,4 @@
-<?php 
+<?php  
 function afficher_la_validation_comment()  
 { 
 	function chargerClasse($classname)
@@ -13,7 +13,7 @@ function afficher_la_validation_comment()
 
 	$readAll1 = $commentManager->readAll1();
 
-	if($readAll1 = true)
+	if($readAll1 == true)
 	{
 		include(dirname(__FILE__).'/../vue/admin/partie_admin_comment.php');
 	}

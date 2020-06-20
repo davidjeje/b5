@@ -1,5 +1,5 @@
 <?php
-function valide_modif_blog_form()
+function valide_modif_blog_form() 
 {
 	function chargerClasse($classname)
 	{

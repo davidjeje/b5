@@ -61,8 +61,7 @@ if (session_status() == PHP_SESSION_NONE)
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>	
-		<div class="colorlib-loader"></div>
+	<body>	 
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
@@ -144,19 +143,21 @@ if (session_status() == PHP_SESSION_NONE)
 										<h1><?php echo htmlspecialchars($readc->message());?></h1>
 									</span></br>
 								</blockquote>
-							</div> 
+							</div>  
 
-							<div class="side-wrap">
+							<div class="side-wrap"> 
 								<h2 class="sidebar-heading">Ajouter un commentaire</h2>
 								<form method="post" action="index.php?page=vers_insert_comment&amp;blog_post_id=<?=$read->id()?>" enctype="multipart/form-data">
+ 
                                     <label for="author">Auteur du commentaire</label>
-                                    <input type="text" class="form-control" name="auteur" id="author" placeholder="Auteur">
+                                    <input type="text" class="form-control" name="auteur" id="author" placeholder="Auteur" required>
                                   	<br/>
 
                                     <label for="content">Commentaire</label>
-                                    <textarea type="text" class="form-control" id="content" name="message"></textarea>
+                                    <textarea type="text" class="form-control" id="content" name="message" required></textarea>
                                     <br/> 
-                                    <input type="submit" value="valider" class="btn btn-primary">          
+
+                                    <input type="submit" value="valider" class="btn btn-primary" name="valider">          
                             	</form>
                             	
 								<h2 class="sidebar-heading">Video Post</h2>
@@ -259,9 +260,9 @@ if (session_status() == PHP_SESSION_NONE)
 					<div class="row">
 						<div class="col-md-12">
 							<p>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-     							<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
-    							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<!-- Information on when the project was carried out and who carried it out. -->
+                        		<small class="block">I am David Marivat and we are in&copy; <script>document.write(new Date().getFullYear());</script> 
+                        		and the project was carried out in 2018. Throughout these years I have made improvements to the code.<i class="icon-heart3" aria-hidden="true"></i></small>
 							</p>
 						</div>
 					</div>

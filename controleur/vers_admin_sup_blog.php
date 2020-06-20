@@ -5,7 +5,7 @@ function afficher_sup_blog()
 	{
   		require 'modele/' . $classe . '.php';
 	}
-	spl_autoload_register('chargerClasse');
+	spl_autoload_register('chargerClasse'); 
 	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
 	$BlogPostManager = new BlogPostManager($bdd);
@@ -18,6 +18,6 @@ function afficher_sup_blog()
 	else
 	{
 		include(dirname(__FILE__).'/../vue/admin/menu_partie_admin.php');
-	}	
+	} 	
 }
 ?>

@@ -34,7 +34,7 @@ class User
         return $this->_id;
     }
 
-    public function role() 
+    public function role()  
     {
         return $this->_role;
     }

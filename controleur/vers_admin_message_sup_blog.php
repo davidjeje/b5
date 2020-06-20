@@ -1,25 +1,31 @@
 <?php
+require '/../functions.php';
 function valide_sup_blog()
 {
-	if (isset($_GET['id']) )
+	$idBlog = htmlspecialchars($_GET['id']);
+	$errors = array();
+
+	function chargerClasse($classname)
 	{
-	// 1 : On force la conversion en nombre entier
-	$_GET['id'] = (int) $_GET['id'];
-
-	// 2 : Le nombre doit être compris entre 1 et 100
-		if ($_GET['id'] >= 1 AND $_GET['id'] <= 100) 
-		{	
-			function chargerClasse($classname)
-			{
-  				require  'modele/' .$classname.'.php';
-			}
-			spl_autoload_register('chargerClasse');
+  		require  'modele/' .$classname.'.php';
+	}
+	spl_autoload_register('chargerClasse');
 			
-			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
-			$BlogPostManager = new BlogPostManager($bdd);
-			$ok= $_GET['id'];
-			$blog= $BlogPostManager->read($ok);
+	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
+	$BlogPostManager = new BlogPostManager($bdd);
+			
+	$blog= $BlogPostManager->read($idBlog);
+	$idDataBase = $blog->id();
+
+	if (isset($idBlog) AND !empty($idBlog) AND $idBlog == $idDataBase)
+	{
+		// 1 : On force la conversion en nombre entier
+		$idBlog = (int) $idBlog;
+
+		// 2 : Le nombre doit être compris entre 1 et 500
+		if ($idBlog >= 1 AND $idBlog <= 500) 
+		{	
 			$delete = $BlogPostManager->delete($blog);
 
 			if($delete == true)
@@ -34,7 +40,8 @@ function valide_sup_blog()
 	}
 	else
 	{
-   		echo 'Il faut renseigner un nom, un prénom et un nombre de répétitions !';
+   		$errors['id'] = "L'id du blog n'est pas valide !!!";
+        debug($errors);
 	}	
 }
 ?>
