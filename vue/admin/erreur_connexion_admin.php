@@ -1,9 +1,11 @@
+<?php
+?>
 <!DOCTYPE HTML>
-<html> 
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Modification d'un blog</title>
+		<title>Message d'erreur de connexion administrateur</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -59,11 +61,14 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="colorlib-logo">David Marivat</div>
+								<div id="colorlib-logo">
+									David Marivat
+								</div>
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>	
+									<li><a href="index.php">Accueil</a></li>
+                                	<li><a href="index.php?page=vers_la_connexion_admin"> Se connecter à la partie administration</a></li>		
 								</ul>
 							</div>
 						</div>
@@ -79,11 +84,11 @@
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
-				   							<h1>Une erreur c'est produite. Impossible de voir la liste des blogs à modifier. Veuillez recommencer ultèrieurement pour modifier ce blog</h1>
+				   							<h1>La connexion ne c'est pas bien déroulée. Veuillez recommencer ultèrieurement.</h1>
 				   						</div>
 				   					</div>
 				   				</div>
-				   			</div>
+				   			</div> 
 			   			</li>
 			  		</ul>
 		  		</div>
@@ -95,7 +100,8 @@
                             <h2>Navigation</h2>
                             <p>
                                 <ul class="colorlib-footer-links">
-                                    <li><a href="index.php?page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>     
+                                    <li><a href="index.php"><i class="icon-check"></i> Accueil</a></li>
+                                    <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>     
                                 </ul>
                             </p>
                         </div>
@@ -136,7 +142,7 @@
 		<!-- jQuery Easing -->
 		<script src="public/js/jquery.easing.1.3.js"></script>
 		<!-- Bootstrap -->
-		<script src="public/js/bootstrap.min.js"></script>
+		<script src="public/js/bootstrap.min.js"></script> 
 		<!-- Waypoints -->
 		<script src="public/js/jquery.waypoints.min.js"></script>
 		<!-- Stellar Parallax -->

@@ -1,44 +1,63 @@
 <?php
+require '/../functions.php';
 function afficher_un_post()
 {
-	if (isset($_GET['id']) )
+	$idBlog = htmlspecialchars($_GET['id']);
+
+	$errors = array();
+
+	function chargerMaClasse($Managers) 
 	{
-	// 1 : On force la conversion en nombre entier
-	$_GET['id'] = (int) $_GET['id'];
+     	require 'modele/' . $Managers . '.php';
+	}
+	spl_autoload_register('chargerMaClasse');
 
-	// 2 : Le nombre doit être compris entre 1 et 100
-		if ($_GET['id'] >= 1 AND $_GET['id'] <= 100) 
-		{	
-			function chargerMaClasse($Managers) 
-			{
-     			require 'modele/' . $Managers . '.php';
-			}
-			spl_autoload_register('chargerMaClasse');
+	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
-			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
-
-			$BlogPostManager = new BlogPostManager($bdd);
-			$idd = $_GET['id'];
-			$read = $BlogPostManager->read($idd);
-			$readAll1 = $BlogPostManager->readAll1();
+	$BlogPostManager = new BlogPostManager($bdd);
 			
-			$CommentManager = new CommentManager($bdd);
-			
-			$readc = $CommentManager->readAllc($idd);
+	$read = $BlogPostManager->read($idBlog);
+	$idDataBase = $read->id();
 
-			if ($readc == true)
-			{
-				include(dirname(__FILE__).'/../vue/le_blog.php');
+	if (isset($idBlog) AND !empty($idBlog) AND $idBlog == $idDataBase)
+	{	
+		if($read == true)
+		{
+			// 1 : On force la conversion en nombre entier
+			$idBlog = (int) $idBlog;
+
+			// 2 : Le nombre doit être compris entre 1 et 100
+			if ($idBlog >= 1 AND $idBlog <= 500) 
+			{	
+				$CommentManager = new CommentManager($bdd);
+			
+				$readc = $CommentManager->readAllc($idBlog);
+
+				if ($readc == true)
+				{
+					include(dirname(__FILE__).'/../vue/le_blog.php');
+				}
+				else
+				{
+					include(dirname(__FILE__).'/../vue/liste_blog.php');
+				}				
 			}
 			else
 			{
-				include(dirname(__FILE__).'/../vue/liste_blog.php');
-			}				
+   				$errors['id'] = "L'id n'existe pas donc le blog demandé n'existe pas !!!";
+        		debug($errors);
+			}
+		}
+		else
+		{
+   			$errors['id'] = "L'id n'est pas compris dans la limite prévus !!!";
+        	debug($errors);
 		}
 	}
 	else
 	{
-   		echo 'Impossible de voir le détail du blog !!!';
+   		$errors['id'] = "L'id du blog n'est pas valide !!!";
+        debug($errors);
 	}
 }
 ?>

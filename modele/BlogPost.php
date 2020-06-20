@@ -10,7 +10,7 @@ class BlogPost
             $_image,          
             $_dateDisplay;
 
-    public function __construct(array $donnees = null)
+    public function __construct( $donnees = null)
     {
         if ($donnees)
         {

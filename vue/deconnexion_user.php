@@ -104,7 +104,7 @@ session_start();
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
                                 	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
+                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>   
                             	</ul>
                         	</p>
                     	</div>

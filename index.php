@@ -1,15 +1,14 @@
 <?php
-
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
 
 //is_file('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php')
-if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or isset($_GET['id']))
+if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php') or isset($_GET['id']))
 {	
-	if ($_GET['page'] == 'vers_liste_blog') 
+	if ($_GET['folder'] == 'BlogPostController' AND $_GET['page'] == 'vers_liste_blog') 
     {
         include('modele/BlogPostManager.php');
-    	include('controleur/'.$_GET['page'].'.php');
+    	include('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php');
         afficher_blog_post();
     } 
 
@@ -141,15 +140,20 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['page'].'.php') or i
         connexion_user1();
     }
 
+    elseif ($_GET['page'] == 'vers_partie_admin') 
+    {
+        include('modele/UserManager.php');
+        include('controleur/'.$_GET['page'].'.php');
+        partie_admin();
+    }
+
     elseif ($_GET['page'] == 'vers_deconnexion_user') 
     {
         include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
         deconnexion_user();
     }
-
 }
-
 else
 {
 	include('controleur/index.php');

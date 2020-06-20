@@ -1,29 +1,31 @@
 <?php
+require '/../functions.php';
 function valide_modif_blog() 
 {
-	if (isset($_GET['id']) )
+	$idBlog = htmlspecialchars($_GET['id']);
+	$errors = array();
+	
+	function chargerClasse($classname)
+	{
+  		require 'modele/' . $classe . '.php';
+	}
+	spl_autoload_register('chargerClasse');
+				
+	$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
+
+	$BlogPostManager = new BlogPostManager($bdd);
+
+	$read = $BlogPostManager->read($idBlog);
+	$idDataBase = $read->id();
+
+	if (isset($idBlog) AND !empty($idBlog) AND $idBlog == $idDataBase)
 	{
 		// 1 : On force la conversion en nombre entier
-		$_GET['id'] = (int) $_GET['id'];
+		$idBlog = (int) $idBlog;
 
-		// 2 : Le nombre doit être compris entre 1 et 100
-		if ($_GET['id'] >= 1 AND $_GET['id'] <= 100) 
+		// 2 : Le nombre doit être compris entre 1 et 500
+		if ($idBlog >= 1 AND $idBlog <= 500) 
 		{	
-			function chargerClasse($classname)
-			{
-  				require 'modele/' . $classe . '.php';
-			}
-			spl_autoload_register('chargerClasse');
-			
-			
-			$bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
-
-			$BlogPostManager = new BlogPostManager($bdd);
-
-			$id = $_GET['id'];
-
-			$read = $BlogPostManager->read($id);
-			
 			if($read == true) 
 			{
 				include(dirname(__FILE__).'/../vue/admin/validation_blog_modif.php');
@@ -33,10 +35,16 @@ function valide_modif_blog()
 				include(dirname(__FILE__).'/../vue/admin/erreur_validation_blog_modif.php');
 			}
 		}
+		else 
+		{
+   			$errors['id'] = "L'id n'est pas compris dans la limite prévus !!!";
+        	debug($errors);
+		}	
 	}
 	else 
 	{
-   		echo 'Impossible de réaliser la modification du blog !!!';
+   		$errors['id'] = "L'id du blog n'est pas valide !!!";
+        debug($errors);
 	}	
 }
 ?>

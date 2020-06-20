@@ -68,7 +68,8 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Gestion des blogs</a></li>	
+									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
+									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>	
 								</ul>
 							</div>
 						</div>
@@ -96,10 +97,10 @@
 							?>
 								<article class="blog-entry">
 									<div class="blog-wrap">
-										<span class="category text-center"><a href="blog.html"><h1> <?php echo$n->title()?>  </h1></a></span>
+										<span class="category text-center"><a href="blog.html"><h1> <?php echo $n->title()?>  </h1></a></span>
 										<h2 class="text-center"><a href="blog.html"><h1> <?php echo$n->chapo()?>  </h1></a></h2>
 										<div class="blog-image">
-											<a href="blog.html" class="blog-img text-center" style="background-image: url(<?php echo$n->image()?>);"><span><i class="icon-link"></i></span></a>
+											<a href="blog.html" class="blog-img text-center" style="background-image: url(<?php echo $n->image()?>);"><span><i class="icon-link"></i></span></a> 
 											<ul class="share">
 												<li class="text-vertical"><i class="icon-share3"></i></li>
 												<li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -107,7 +108,7 @@
 												<li><a href="#"><i class="icon-googleplus"></i></a></li>
 											</ul>
 										</div>
-										<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo$n->author()?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
+										<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo $n->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo $n->author()?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
 									</div>
 									<p class="text-center">
 										<a href="index.php?page=vers_admin_message_modif_blog&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">modifier</a>
@@ -200,12 +201,11 @@
 				<div class="container">
 					<div class="row row-pb-md">
 						<div class="col-md-4">
-							<h2>Navigational</h2>
+							<h2>Navigation</h2>
 							<p>
 								<ul class="colorlib-footer-links">
-                                	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                	<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
+                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
                             	</ul>
 							</p>
 						</div>
@@ -213,34 +213,20 @@
 						<div class="col-md-4 col-md-push-1">
 							<h2>Tags</h2>
 							<p class="tags">
-								<span><a href="#"><i class="icon-tag"></i> Modeling</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Fashion</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Life</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Blog</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Workout</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Vacation</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Travel</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Exercise</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Health</a></span>
-								<span><a href="#"><i class="icon-tag"></i> News</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Model</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Women</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Animals</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Nature</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Art</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Sea</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Ocean</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Office</a></span>
-								<span><a href="#"><i class="icon-tag"></i> Home</a></span>
+								<span><a href="#"><i class="icon-tag"></i> Métier du web</a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Robot et nouvelle technologie</a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Transhumaniste </a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Futur de l'homme</a></span>
+                            	<span><a href="#"><i class="icon-tag"></i> Le web est il au géant du web ?</a></span>    
 							</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
 							<p>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-     							<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
-    							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								<!-- Information on when the project was carried out and who carried it out. -->
+                                <small class="block">I am David Marivat and we are in&copy; <script>document.write(new Date().getFullYear());</script> 
+                                and the project was carried out in 2018. Throughout these years I have made improvements to the code.<i class="icon-heart3" aria-hidden="true"></i></small>
 							</p>
 						</div>
 					</div>

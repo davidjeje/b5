@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) 
+{
+    session_start();
+}  
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -54,8 +60,6 @@
 	</head>
 
 	<body>	
-		<div class="colorlib-loader"></div>
-
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
@@ -66,40 +70,31 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>								
-									<li class="has-dropdown"><a href="index.php?page=vers_la_connexion_admin">Se connecter à la partie administration</a></li>
-									<li><a href="index.php?page=vers_le_menu_admin.php">Gestion des blogs</a></li>
+									<li><a href="index.php?page=vers_le_menu_admin.php">Menu administrateur</a></li>
+									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</nav>
-
-			<aside id="colorlib-hero">
-				<div class="flexslider">
-					<ul class="slides">
-			   			<li style="background-image: url(images/img_bg_1.jpg);">
-			   				<div class="overlay"></div>
-			   				<div class="container-fluid">
-			   					<div class="row">
-				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
-				   						<div class="slider-text-inner text-center">
-				   							<h2></h2>
-				   							<h1>Gestion Administrative</h1>
-				   						</div>
-				   					</div>
-				   				</div>
-			   				</div>
-			   			</li>
-			  		</ul>
-		  		</div>
-			</aside>
-
+ 
 			<div id="colorlib-contact"> 
 				<div class="container">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 animate-box">
-							<h2>Gérer mieux votre site</h2>
+							<?php
+                        	if(!empty($_SESSION))
+                        	{
+                        	?>
+                            <h2> 
+                                Bonjour <?php echo $_SESSION['pseudo'];?>
+                            </h2>
+                        	<?php
+                        	} 
+                        	?>
+							</p>
+							<h3>En tant qu'administrateur, vous pouvez:</h3>
 							<li><a href="index.php?page=vers_admin_ajout_blog">Ajouter un blog post</a></li>
 							<li class="has-dropdown active"><a href="index.php?page=vers_admin_modif_blog">Modifier un blog post</a></li>
 							<li class="has-dropdown"><a href="index.php?page=vers_admin_sup_blog">Suppprimer un blog post</a></li>
@@ -113,13 +108,11 @@
 				<div class="container">
                 	<div class="row row-pb-md">
                     	<div class="col-md-4">
-                        	<h2>Navigation</h2>
+                        	<h2>Navigation</h2> 
                         	<p>
                             	<ul class="colorlib-footer-links">
-                                	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>   
+                            		<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
+                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
                             	</ul>
                         	</p>
                     	</div>
@@ -135,22 +128,6 @@
                                 	<span>2. Les chatbots 
 
                                 	Nous verrons davantage de chatbots et nous devrons apprendre à interagir avec. Nous pourrons ainsi leur apprendre ce que nous attendons d’eux – Chalmers Brown, Due.</span>
-                            	</li>
-                            	<li>
-                                	<span>3. La place grandissante de l’éthique dans le secteur de l’innovation technologique
-
-									Nous nous heurtons aux dilemmes éthiques qui sont liés directement à ce que nous créons et comment nous le créons : en orientant des publicités en fonction des facteurs démographiques, l’angoisse de l’automatisation des emplois, le revenu universel et même la fréquence du harcèlement sexuel. Le secteur de la tech évolue plus rapidement que les systèmes éthiques qui l’encadrent – Kieran Snyder, Textio.</span>
-                            	</li>
-                            	<li>
-                                	<span>4.La réalité augmentée
-
-									Snapchat a aidé à la démocratisation de la réalité augmentée grâce à ses filtres amusants. Plus récemment, Apple a présenté ARKit, permettant de faciliter l’intégration de la réalité augmentée dans les applications pour iPhones et des entreprises comme Amazon l’on déjà adopté. Je pense que 2018 sera sous le signe de la réalité augmentée – Thomas Griffin, OptinMonster.</span>
-                                
-                            	</li>
-                            	<li>
-                                	<span>5. Des fonctionnalités d’équipements informatiques et de logiciels compatibles avec la réalité augmentée et le machine learning
-
-									Bon nombre d’entreprises produisent des fonctionnalités d’équipements et des logiciels compatibles avec la réalité augmentée et le machine learning. Les développeurs savent tirer profit de ces puces et API pour créer des applications permettant de voir le monde différemment et de mieux communiquer avec les machines. Je prédis également que les nouvelles technologies seront utilisées pour contrôler la sécurité, aider à regrouper le big data et à améliorer les processus d’authentification – Chris Kirby, Voices.com.</span>     
                             	</li>
                         	</ul>
                     	</div>

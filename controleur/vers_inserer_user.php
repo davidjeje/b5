@@ -1,9 +1,10 @@
 <?php
-//session_start();
+require '/../functions.php';
 function inserer_user()
 {
 	if (isset($_POST['ok']))
 	{
+        $errors = array();
         $pseudo = htmlspecialchars($_POST['prenom']);
         $password = htmlspecialchars($_POST['password']);
         $email = htmlspecialchars($_POST['email']);
@@ -48,11 +49,27 @@ function inserer_user()
                         include(dirname(__FILE__).'/../vue/erreur_enregistrement_user.php');
                     }                  
                 }
-            }                        
+                else
+                {
+                    $errors['email'] = "Votre email n'est pas valide !!!";
+                    debug($errors);
+                }
+            }
+            else
+            {
+                $errors['password'] = "Votre mot de passe n'est pas valide !!!";
+                debug($errors);
+            }                       
+        }
+        else
+        {
+            $errors['prenom'] = "Votre pseudo n'est pas valide !!!";
+            debug($errors);
         }     
 	}
 	else
     {
-        
+        $errors['ok'] = "L'utilisateur n'a pas click sur le bouton envoyer !!!";
+        debug($errors);
     }
 };

@@ -75,7 +75,7 @@
 				</div>
 			</nav>
 			<aside id="colorlib-hero">
-				<div class="flexslider">
+				<div class="flexslider"> 
 					<ul class="slides">
 			   			<li style="background-image: url(images/img_bg_1.jpg);">
 			   				<div class="container-fluid">
@@ -86,7 +86,9 @@
 				   							<form class="form-inline qbstp-header-subscribe" method="post" action="index.php?page=vers_connexion_partie_user">
 				   								<div class="form-group">
 													<input type="text" class="form-control" id="pseudo" placeholder="Enter your pseudo" name="pseudo" autofocus required>
-													<input type="password" class="form-control" id="email" placeholder="Enter your password" name="password">
+
+													<input type="password" class="form-control" id="password" placeholder="Enter your password" name="password"  required>
+
 													<input type="submit" value="connexion" class="btn btn-primary" name="connexion">
 												</div>
 											</form>
@@ -108,7 +110,7 @@
                            			<div class="row form-group">
                                 		<div class="col-md-6">
                                     		<label for="fname">Pseudo</label>
-                                    		<input type="text" name="prenom" id="prenom" class="form-control" placeholder="Your firstname" >
+                                    		<input type="text" name="prenom" id="prenom" class="form-control" placeholder="Your firstname" autofocus required>
                                 		</div>
                             		</div>
 
@@ -136,20 +138,19 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
                 	<div class="row row-pb-md">
                     	<div class="col-md-4">
-                        	<h2>Navigation</h2>
-                        	<p>
+                        	<h2>Navigation</h2> 
+                        	<p> 
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
                                 	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
                                 	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>     
-                            	</ul>
+                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li> 
+                            	</ul> 
                         	</p>
                     	</div>
                     	<div class="col-md-4">
@@ -168,7 +169,7 @@
                             	<span><a href="#"><i class="icon-tag"></i> Transhumaniste </a></span>
                             	<span><a href="#"><i class="icon-tag"></i> Futur de l'homme</a></span>
                             	<span><a href="#"><i class="icon-tag"></i> Le web est il au géant du web ?</a></span>   
-                        	</p>
+                        	</p> 
                     	</div>
                 	</div>
                 	<div class="row">

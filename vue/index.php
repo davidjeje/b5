@@ -101,17 +101,6 @@ if (session_status() == PHP_SESSION_NONE)
             <aside id="colorlib-breadcrumbs">
                 <div class="container">
                     <div class="row">
-                        <?php
-                        if(!empty($_SESSION))
-                        {
-                        ?>
-                            <p> 
-                                Bonjour <?php echo $_SESSION['pseudo'];?>
-                            </p>
-                        <?php
-                        }
-                        ?>
-                        
                         <div class="col-md-12 breadcrumbs text-center">
                             <h2>Si vous voulez aller vite, allez y seul mais si vous voulez aller plus loin entourez vous des bonnes personnes qui vous aiderons à réaliser votre projet... faite appel au bon développeur.</h2>
                         </div>
@@ -159,21 +148,16 @@ if (session_status() == PHP_SESSION_NONE)
                                             06 06 78 45 93
                                         </p>
                                     </div>
-                                    <div class="col-md-3">
-                                        <p>
-                                            <span><i class="icon-paperplane"></i></span>
-                                            <a href="../CV.PDF">CV</a>
-                                        </p>
-                                    </div>
+                                   
                                     <div class="col-md-3">
                                         <p>
                                             <span><i class="icon-linkedin"></i></span> <a href="https://www.linkedin.com">linkedin David Marivat</a>
                                         </p>
-                                    </div>
+                                    </div> 
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-md-10 col-md-offset-1 animate-box">
-                                <h2>Formulaire de contact</h2>
+                                <h2>Formulaire de contact</h2> 
                                 <form method="post" action="index.php?page=vers_traitement_email">
                                     <div class="row form-group">
                                         <div class="col-md-6">
@@ -198,7 +182,7 @@ if (session_status() == PHP_SESSION_NONE)
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="envoyer" class="btn btn-primary">
+                                        <input type="submit" value="envoyer" class="btn btn-primary" name="envoyer">
                                     </div>
                                 </form>     
                             </div>
