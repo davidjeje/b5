@@ -4,7 +4,7 @@ function valide_modif_blog()
 {
 	$idBlog = htmlspecialchars($_GET['id']);
 	$errors = array();
-	
+
 	function chargerClasse($classname)
 	{
   		require 'modele/' . $classe . '.php';
@@ -45,6 +45,6 @@ function valide_modif_blog()
 	{
    		$errors['id'] = "L'id du blog n'est pas valide !!!";
         debug($errors);
-	}	
+	} 	
 }
 ?>

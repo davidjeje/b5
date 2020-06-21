@@ -1,4 +1,4 @@
-<?php 
+<?php  
 function afficher_blog_post()
 {
 	function chargerMaClasse($classe) 
@@ -14,5 +14,5 @@ function afficher_blog_post()
 	
 	$readAll1= $BlogPostManager->readAll1(); 
 
-	include(dirname(__FILE__).'/../vue/liste_blog.php');		
+	include(dirname(__FILE__).'/../../vue/liste_blog.php');		
 }

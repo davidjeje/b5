@@ -67,7 +67,7 @@
 									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
 									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>	
 								</ul>
-							</div>
+							</div> 
 						</div>
 					</div>
 				</div>

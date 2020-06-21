@@ -75,7 +75,7 @@ if (session_status() == PHP_SESSION_NONE)
                             <div class="col-xs-10 text-right menu-1">
                                 <ul>
                                     <li><a href="index.php">Accueil</a></li>
-                                    <li class="has-dropdown"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
+                                    <li class="has-dropdown"><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog">Blog post</a></li>
                                     <?php 
                                     if(empty($_SESSION))
                                     {
@@ -200,7 +200,7 @@ if (session_status() == PHP_SESSION_NONE)
                             <a href="#" class="instagram text-center" style="background-image: url(images/gallery-8.jpg);"></a>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <footer id="colorlib-footer" role="contentinfo">
                     <div class="container">
                         <div class="row row-pb-md">
@@ -209,7 +209,7 @@ if (session_status() == PHP_SESSION_NONE)
                                 <p>
                                     <ul class="colorlib-footer-links">
                                         <li><a href="index.php"><i class="icon-check"></i> Accueil</a></li>
-                                        <li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
+                                        <li><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
                                         <?php 
                                         if(empty($_SESSION))
                                         {

@@ -43,5 +43,5 @@ function valide_sup_blog()
    		$errors['id'] = "L'id du blog n'est pas valide !!!";
         debug($errors);
 	}	
-}
+} 
 ?>

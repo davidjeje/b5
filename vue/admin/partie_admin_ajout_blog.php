@@ -53,7 +53,7 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="page">
+		<div id="page"> 
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
 					<div class="container">
@@ -102,7 +102,7 @@
                                     <input type="file" name="image" id= "image"/>
                                     <br/>
 
-                                   <input type="submit" value="Ajouter" class="btn btn-primary">
+                                   <input type="submit" value="Ajouter" class="btn btn-primary" name="Ajouter">
                             	</form>
 							</div>
 						</div>					

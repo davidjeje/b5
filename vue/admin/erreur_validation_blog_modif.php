@@ -58,8 +58,10 @@
 				<div class="top-menu">
 					<div class="container">
 						<div class="row">
-							<div class="col-xs-2">
-								<div id="colorlib-logo">David Marivat</div>
+							<div class="col-xs-2"> 
+								<div id="colorlib-logo">
+									David Marivat
+								</div>
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>

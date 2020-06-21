@@ -1,18 +1,18 @@
 <?php
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=blo;charset=utf8', 'root', '');
-
+ 
 //is_file('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php')
-if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php') or isset($_GET['id']))
+if (!empty($_GET['page']) AND !empty($_GET['folder']) AND is_file('controleur/'. $_GET['folder'] . '/' .$_GET['page'].'.php') or isset($_GET['id']))
 {	
 	if ($_GET['folder'] == 'BlogPostController' AND $_GET['page'] == 'vers_liste_blog') 
     {
         include('modele/BlogPostManager.php');
-    	include('controleur/'.$_GET['folder']'/'.$_GET['page'].'.php');
+    	include('controleur/'.$_GET['folder'].'/'.$_GET['page'].'.php');
         afficher_blog_post();
     } 
 
-    elseif ($_GET['page'] == 'vers_le_blog') 
+    /*elseif ($_GET['page'] == 'vers_le_blog') 
     {
         include('modele/BlogPostManager.php');
         include('modele/CommentManager.php');
@@ -152,7 +152,7 @@ if ((!empty($_GET['page'])) AND is_file('controleur/'.$_GET['folder']'/'.$_GET['
         include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
         deconnexion_user();
-    }
+    }*/
 }
 else
 {
