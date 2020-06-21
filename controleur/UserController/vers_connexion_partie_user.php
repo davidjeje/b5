@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE)
 {
     session_start(); 
 }
-require '/../functions.php'; 
+require '/../../functions.php'; 
 function connexion_user1()
 {
 	if (isset($_POST['connexion']))
@@ -35,11 +35,11 @@ function connexion_user1()
                     $_SESSION['id'] = $read->id();
                     $_SESSION['pseudo'] = $read->pseudo();
                     $_SESSION['email'] = $read->email();
-                    include(dirname(__FILE__).'/../vue/profil.php');
+                    include(dirname(__FILE__).'/../../vue/profil.php'); 
                 }
                 else
                 {
-                    include(dirname(__FILE__).'/../vue/connexion_user.php');
+                    include(dirname(__FILE__).'/../../vue/connexion_user.php');
                 }
             }
             else

@@ -12,13 +12,33 @@ if (!empty($_GET['page']) AND !empty($_GET['folder']) AND is_file('controleur/'.
         afficher_blog_post();
     } 
 
-    /*elseif ($_GET['page'] == 'vers_le_blog') 
+    elseif ($_GET['folder'] == 'BlogPostController' AND $_GET['page'] == 'vers_le_blog') 
     {
         include('modele/BlogPostManager.php');
         include('modele/CommentManager.php');
-        include('controleur/'.$_GET['page'].'.php');
+        include('controleur/'.$_GET['folder'].'/'.$_GET['page'].'.php');
         afficher_un_post();       
     }
+
+    elseif ($_GET['folder'] == 'UserController' AND $_GET['page'] == 'vers_connexion_user') 
+    {
+        include('controleur/'.$_GET['folder'].'/'.$_GET['page'].'.php');
+        connexion_user();
+    }
+
+    elseif ($_GET['folder'] == 'UserController' AND $_GET['page'] == 'vers_connexion_partie_user') 
+    {
+        include('modele/UserManager.php');
+        include('controleur/'.$_GET['folder'].'/'.$_GET['page'].'.php');
+        connexion_user1();
+    }
+
+    elseif ($_GET['folder'] == 'UserController' AND $_GET['page'] == 'vers_deconnexion_user') 
+    {
+        include('modele/UserManager.php');
+        include('controleur/'.$_GET['folder'].'/'.$_GET['page'].'.php');
+        deconnexion_user();
+    } 
 
     elseif ($_GET['page'] == 'vers_la_connexion_admin') 
     {
@@ -120,24 +140,11 @@ if (!empty($_GET['page']) AND !empty($_GET['folder']) AND is_file('controleur/'.
         envoyer_email();
     }
 
-     elseif ($_GET['page'] == 'vers_connexion_user') 
-    {
-        include('controleur/'.$_GET['page'].'.php');
-        connexion_user();
-    }
-
     elseif ($_GET['page'] == 'vers_inserer_user') 
     {
         include('modele/UserManager.php');
         include('controleur/'.$_GET['page'].'.php');
         inserer_user();
-    }
-
-    elseif ($_GET['page'] == 'vers_connexion_partie_user') 
-    {
-        include('modele/UserManager.php');
-        include('controleur/'.$_GET['page'].'.php');
-        connexion_user1();
     }
 
     elseif ($_GET['page'] == 'vers_partie_admin') 
@@ -146,13 +153,6 @@ if (!empty($_GET['page']) AND !empty($_GET['folder']) AND is_file('controleur/'.
         include('controleur/'.$_GET['page'].'.php');
         partie_admin();
     }
-
-    elseif ($_GET['page'] == 'vers_deconnexion_user') 
-    {
-        include('modele/UserManager.php');
-        include('controleur/'.$_GET['page'].'.php');
-        deconnexion_user();
-    }*/
 }
 else
 {

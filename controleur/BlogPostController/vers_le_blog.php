@@ -1,5 +1,5 @@
 <?php
-require '/../functions.php';
+require '/../../functions.php';
 function afficher_un_post()
 {
 	$idBlog = htmlspecialchars($_GET['id']);
@@ -35,11 +35,11 @@ function afficher_un_post()
 
 				if ($readc == true)
 				{
-					include(dirname(__FILE__).'/../vue/le_blog.php');
+					include(dirname(__FILE__).'/../../vue/le_blog.php');
 				}
 				else
 				{
-					include(dirname(__FILE__).'/../vue/liste_blog.php');
+					include(dirname(__FILE__).'/../../vue/liste_blog.php');
 				}				
 			}
 			else
