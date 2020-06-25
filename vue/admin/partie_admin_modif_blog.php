@@ -61,11 +61,6 @@
 				<div class="top-menu">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-xs-2">
-								<div id="colorlib-logo">
-									<a href="accueil.php">David Marivat.</a>
-								</div>
-							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
 									<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
@@ -76,7 +71,6 @@
 					</div>
 				</div>
 			</nav>
-			
 			<aside id="colorlib-breadcrumbs">
 				<div class="container">
 					<div class="row">
@@ -86,7 +80,6 @@
 					</div>
 				</div>
 			</aside>
-
 			<div id="colorlib-container">
 				<div class="container">
 					<div class="row">
@@ -168,7 +161,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div id="colorlib-instagram">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 colorlib-heading text-center">
@@ -196,7 +188,6 @@
 					</div>
 				</div>
 			</div>
-
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
 					<div class="row row-pb-md">
@@ -209,7 +200,6 @@
                             	</ul>
 							</p>
 						</div>
-					
 						<div class="col-md-4 col-md-push-1">
 							<h2>Tags</h2>
 							<p class="tags">
@@ -233,7 +223,6 @@
 				</div>
 			</footer>
 		</div>
-
 		<div class="gototop js-top">
 			<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 		</div>
@@ -242,7 +231,7 @@
 		<script src="public/js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
 		<script src="public/js/jquery.easing.1.3.js"></script>
-		<!-- Bootstrap -->
+		<!-- Bootstrap --> 
 		<script src="public/js/bootstrap.min.js"></script>
 		<!-- Waypoints -->
 		<script src="public/js/jquery.waypoints.min.js"></script>

@@ -174,7 +174,6 @@ if (session_status() == PHP_SESSION_NONE)
 					</div>
 				</div>
 			</div>
-
 			<div id="colorlib-instagram">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 colorlib-heading text-center">

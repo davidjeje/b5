@@ -97,7 +97,7 @@
                             <h2>Navigation</h2>
                             <p>
                                 <ul class="colorlib-footer-links">
-                                    <li><a href="index.php?page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>     
+                                    <li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>     
                                 </ul>
                             </p>
                         </div>
@@ -157,7 +157,7 @@
 		<script src="public/js/google_map.js"></script>
 
 		<!-- Main -->
-		<script src="public/js/main.js"></script>
+		<script src="public/js/main.js"></script> 
 	</body>
 </html>
 

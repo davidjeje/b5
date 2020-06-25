@@ -73,8 +73,7 @@
 						</div>
 					</div>
 				</div>
-			</nav>
-			 
+			</nav> 
 			<div id="colorlib-contact">    
 				<div class="container"> 
 					<div class="row">
@@ -97,7 +96,6 @@
 					</div>		
 				</div>
 			</div>
-		
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
                 	<div class="row row-pb-md">

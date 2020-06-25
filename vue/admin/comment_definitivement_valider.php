@@ -65,15 +65,14 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>	
-									<li class="has-dropdown"><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
-									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>
+									<li class="has-dropdown"><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li> 
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</nav>
-
 			<div id="colorlib-contact">
 				<div class="container">
 					<div class="row">
@@ -85,7 +84,6 @@
 					</div>
 				</div>
 			</div>
-		
 			<footer id="colorlib-footer" role="contentinfo">	
 				<div class="container">
 					<div class="row row-pb-md">
@@ -93,12 +91,11 @@
 							<h2>Navigation</h2>
 							<p>
 								<ul class="colorlib-footer-links">
-                                	<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
                                 	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
                             	</ul>
 							</p>
 						</div>
-
 						<h2>D'autre thème vont être abordé</h2>
                     	<ul class="colorlib-footer-links">
                         	<li>

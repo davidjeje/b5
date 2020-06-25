@@ -157,7 +157,7 @@
 		<script src="public/js/google_map.js"></script>
 
 		<!-- Main -->
-		<script src="public/js/main.js"></script>
+		<script src="public/js/main.js"></script> 
 	</body>
 </html>
 

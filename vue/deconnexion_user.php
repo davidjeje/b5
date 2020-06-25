@@ -94,7 +94,6 @@ session_start();
 			  		</ul>
 		  		</div>
 			</aside>
-
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
                 	<div class="row row-pb-md">

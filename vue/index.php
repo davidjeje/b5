@@ -156,7 +156,7 @@ if (session_status() == PHP_SESSION_NONE)
                                     </div> 
                                 </div>
                             </div> 
-                            <div class="col-md-10 col-md-offset-1 animate-box">
+                            <div class="col-md-10 col-md-offset-1 animate-box"> 
                                 <h2>Formulaire de contact</h2> 
                                 <form method="post" action="index.php?folder=UserController&amp;page=vers_traitement_email"> 
                                     <div class="row form-group">

@@ -116,7 +116,7 @@
                                 <span><a href="#"><i class="icon-tag"></i> Futur de l'homme</a></span>
                                 <span><a href="#"><i class="icon-tag"></i> Le web est il au géant du web ?</a></span>   
                             </p>
-                        </div>
+                        </div> 
                     </div>
                     <div class="row">
                         <div class="col-md-12">

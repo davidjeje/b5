@@ -58,7 +58,6 @@ if (session_status() == PHP_SESSION_NONE)
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>	 
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
@@ -104,7 +103,6 @@ if (session_status() == PHP_SESSION_NONE)
 					</div>
 				</div>
 			</div>
-		
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
                 	<div class="row row-pb-md">
@@ -139,7 +137,7 @@ if (session_status() == PHP_SESSION_NONE)
                             	<span><a href="#"><i class="icon-tag"></i> Transhumaniste </a></span>
                             	<span><a href="#"><i class="icon-tag"></i> Futur de l'homme</a></span>
                             	<span><a href="#"><i class="icon-tag"></i> Le web est il au géant du web ?</a></span>    
-                        	</p>
+                        	</p> 
                     	</div>
                 	</div>
                 	<div class="row">

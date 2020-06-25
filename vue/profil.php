@@ -96,7 +96,6 @@ if (session_status() == PHP_SESSION_NONE)
 			  		</ul>
 		  		</div>
 			</aside> 
-		
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
                 	<div class="row row-pb-md">
@@ -172,5 +171,5 @@ if (session_status() == PHP_SESSION_NONE)
 		<!-- Main -->
 		<script src="public/js/main.js"></script>
 	</body>
-</html>
+</html> 
 
