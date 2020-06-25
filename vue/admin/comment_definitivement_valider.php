@@ -66,7 +66,7 @@
 							<div class="col-xs-10 text-right menu-1">
 								<ul>	
 									<li class="has-dropdown"><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
-									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>
 								</ul>
 							</div>
 						</div>
@@ -94,7 +94,7 @@
 							<p>
 								<ul class="colorlib-footer-links">
                                 	<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
                             	</ul>
 							</p>
 						</div>

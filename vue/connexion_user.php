@@ -66,8 +66,8 @@
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
 									<li><a href="index.php">Accueil</a></li>
-                                	<li class="has-dropdown"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>	
+                                	<li class="has-dropdown"><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog">Blog post</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_connexion_user">Connexion/inscription</a></li>	
 								</ul>
 							</div>
 						</div>
@@ -77,13 +77,13 @@
 			<aside id="colorlib-hero">
 				<div class="flexslider"> 
 					<ul class="slides">
-			   			<li style="background-image: url(images/img_bg_1.jpg);">
+			   			<li style="background-image: url(images/img_bg_1.jpg);"> 
 			   				<div class="container-fluid">
 			   					<div class="row">
 				   					<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   						<div class="slider-text-inner text-center">
 				   							<p>Entrer les informations nécessaire pour se connecter en tant que membre.</p>
-				   							<form class="form-inline qbstp-header-subscribe" method="post" action="index.php?page=vers_connexion_partie_user">
+				   							<form class="form-inline qbstp-header-subscribe" method="post" action="index.php?folder=UserController&amp;page=vers_connexion_partie_user">
 				   								<div class="form-group">
 													<input type="text" class="form-control" id="pseudo" placeholder="Enter your pseudo" name="pseudo" autofocus required>
 
@@ -102,11 +102,11 @@
 			</aside>
 			<div id="colorlib-contact">
 				<div class="container">
-					<div class="row">
+					<div class="row"> 
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<h1>Inscription</h1>
 							<div class="row contact-info-wrap"> 
-								<form method="post" action="index.php?page=vers_inserer_user">
+								<form method="post" action="index.php?folder=UserController&amp;page=vers_inserer_user">
                            			<div class="row form-group">
                                 		<div class="col-md-6">
                                     		<label for="fname">Pseudo</label>
@@ -147,9 +147,9 @@
                         	<p> 
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li> 
+                                	<li><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li> 
                             	</ul> 
                         	</p>
                     	</div>

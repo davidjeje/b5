@@ -53,7 +53,7 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="page">
+		<div id="page"> 
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
 					<div class="container">
@@ -65,13 +65,13 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
-									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li> 	
+									<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li> 	
 								</ul>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> 
 			</nav>
 
 			<div id="colorlib-contact"> 
@@ -80,7 +80,7 @@
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<h2>Ajouter un blog</h2>
 							<div class="row contact-info-wrap">
-								<form method="post" action="index.php?page=vers_admin_message_ajout_blog" enctype="multipart/form-data">
+								<form method="post" action="index.php?folder=BlogPostController&amp;page=vers_admin_message_ajout_blog" enctype="multipart/form-data">
 					
                                     <label for="author">Auteur du blog</label>
                                     <input type="text" class="form-control" name="author" id="author" placeholder="Auteur">
@@ -102,7 +102,7 @@
                                     <input type="file" name="image" id= "image"/>
                                     <br/>
 
-                                   <input type="submit" value="Ajouter" class="btn btn-primary">
+                                   <input type="submit" value="Ajouter" class="btn btn-primary" name="Ajouter">
                             	</form>
 							</div>
 						</div>					
@@ -118,8 +118,8 @@
                         		<h2>Navigation</h2>
                         		<p>
                             		<ul class="colorlib-footer-links">
-                                		<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
-                                		<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>  
+                                		<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>
+                                		<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>  
                             		</ul>
                         		</p>
                     		</div>

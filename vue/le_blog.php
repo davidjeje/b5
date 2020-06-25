@@ -65,7 +65,7 @@ if (session_status() == PHP_SESSION_NONE)
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
-					<div class="container-fluid">
+					<div class="container-fluid"> 
 						<div class="row">
 							<div class="col-xs-2">
 								<div id="colorlib-logo">
@@ -75,18 +75,18 @@ if (session_status() == PHP_SESSION_NONE)
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
 									<li><a href="index.php">Accueil</a></li>
-									<li class="has-dropdown active"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
+									<li class="has-dropdown active"><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog">Blog post</a></li>
 									<?php 
                                     if(empty($_SESSION))
                                     {
                                     ?>
-                                        <li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>
+                                        <li><a href="index.php?folder=UserController&amp;page=vers_connexion_user">Connexion/inscription</a></li>
                                     <?php
                                     }
                                     else
                                     {
                                     ?>
-                                        <li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
+                                        <li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>
                                     <?php
                                     }
                                     ?>   
@@ -143,11 +143,10 @@ if (session_status() == PHP_SESSION_NONE)
 										<h1><?php echo htmlspecialchars($readc->message());?></h1>
 									</span></br>
 								</blockquote>
-							</div>  
-
+							</div>   
 							<div class="side-wrap"> 
 								<h2 class="sidebar-heading">Ajouter un commentaire</h2>
-								<form method="post" action="index.php?page=vers_insert_comment&amp;blog_post_id=<?=$read->id()?>" enctype="multipart/form-data">
+								<form method="post" action="index.php?folder=CommentController&amp;page=vers_insert_comment&amp;blog_post_id=<?=$read->id()?>" enctype="multipart/form-data">
  
                                     <label for="author">Auteur du commentaire</label>
                                     <input type="text" class="form-control" name="auteur" id="author" placeholder="Auteur" required>
@@ -207,22 +206,22 @@ if (session_status() == PHP_SESSION_NONE)
 				<div class="container">
 					<div class="row row-pb-md">
 						<div class="col-md-4">
-							<h2>Navigation</h2>
+							<h2>Navigation</h2> 
 							<p>
 								<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Accueil</a></li>
-                                	<li><a href="index.php?page=news"><i class="icon-check"></i> Blog post</a></li> 
+                                	<li><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li> 
                                 	<?php 
                                         if(empty($_SESSION))
                                         {
                                         ?>
-                                            <li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
+                                            <li><a href="index.php?folder=UserController&amp;page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
                                         <?php
                                         }
                                         else
                                         {
                                         ?>
-                                            <li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
+                                            <li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
                                         <?php
                                         }
                                         ?>   
@@ -230,7 +229,7 @@ if (session_status() == PHP_SESSION_NONE)
                                         if(empty($_SESSION))
                                         {
                                         ?> 
-                                            <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                            <li><a href="index.php?folder=UserController&amp;page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
                                         <?php
                                         }
                                         ?>    

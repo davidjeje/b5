@@ -65,13 +65,15 @@ if (session_status() == PHP_SESSION_NONE)
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="colorlib-logo">David Marivat</div>
+								<div id="colorlib-logo">
+									David Marivat
+								</div>
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
 									<li><a href="index.php">Accueil</a></li>
-                                	<li class="has-dropdown"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
+                                	<li class="has-dropdown"><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog">Blog post</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>
 								</ul>
 							</div>
 						</div>
@@ -103,8 +105,8 @@ if (session_status() == PHP_SESSION_NONE)
                         	<p>
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
+                                	<li><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
                             	</ul>
                         	</p>
                     	</div>
