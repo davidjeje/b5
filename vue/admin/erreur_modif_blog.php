@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Modification d'un blog</title>
+		<title>Erreur pour la modification d'un blog</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -53,7 +53,6 @@
 		<![endif]-->
 	</head>
 	<body>	
-		<div class="colorlib-loader"></div>
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
@@ -92,7 +91,7 @@
 		  		</div>
 			</aside>
 			<footer id="colorlib-footer" role="contentinfo">
-                <div class="container">
+                <div class="container"> 
                     <div class="row row-pb-md">
                         <div class="col-md-4">
                             <h2>Navigation</h2>

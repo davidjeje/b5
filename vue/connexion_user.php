@@ -131,14 +131,12 @@
                             		<div class="form-group">
                                 		<input type="submit" value="envoyer" class="btn btn-primary" name="ok">
                             		</div>
-
                         		</form>   
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
                 	<div class="row row-pb-md">
@@ -215,5 +213,5 @@
 		<!-- Main -->
 		<script src="public/js/main.js"></script>
 	</body>
-</html>
+</html> 
 

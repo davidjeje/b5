@@ -105,7 +105,6 @@ if (session_status() == PHP_SESSION_NONE)
 					</div>
 				</div>
 			</aside> 
-
 			<div id="colorlib-container">
 				<div class="container">
 					<div class="row">

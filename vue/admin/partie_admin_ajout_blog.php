@@ -109,7 +109,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div id="colorlib-subscribe">
 				<footer id="colorlib-footer" role="contentinfo">
 					<div class="container">

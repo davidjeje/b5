@@ -138,7 +138,7 @@
 		<!-- jQuery -->
 		<script src="public/js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
-		<script src="public/js/jquery.easing.1.3.js"></script>
+		<script src="public/js/jquery.easing.1.3.js"></script> 
 		<!-- Bootstrap -->
 		<script src="public/js/bootstrap.min.js"></script>
 		<!-- Waypoints -->

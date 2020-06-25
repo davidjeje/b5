@@ -72,8 +72,7 @@
 						</div>
 					</div>
 				</div>
-			</nav>
-			
+			</nav>	
 			<div id="colorlib-contact"> 
 				<div class="container">
 					<div class="row">
@@ -102,10 +101,6 @@
 						</div>		
 					</div>
 				</div>
-			</div>
-		
-			<div id="colorlib-subscribe">
-				<div class="overlay"></div>	
 			</div>
 			<footer id="colorlib-footer" role="contentinfo">
 				<div class="container">
