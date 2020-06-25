@@ -18,7 +18,7 @@ function afficher_un_post()
 			
 	$read = $BlogPostManager->read($idBlog);
 	$idDataBase = $read->id();
-
+ 
 	if (isset($idBlog) AND !empty($idBlog) AND $idBlog == $idDataBase)
 	{	
 		if($read == true)

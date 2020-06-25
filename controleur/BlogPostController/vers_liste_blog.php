@@ -1,6 +1,6 @@
 <?php  
 function afficher_blog_post()
-{
+{  
 	function chargerMaClasse($classe) 
 	{
     	require 'modele/' . $classe . '.php';
@@ -15,4 +15,4 @@ function afficher_blog_post()
 	$readAll1= $BlogPostManager->readAll1(); 
 
 	include(dirname(__FILE__).'/../../vue/liste_blog.php');		
-}
+} 

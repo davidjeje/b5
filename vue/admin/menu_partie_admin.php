@@ -59,19 +59,20 @@ if (session_status() == PHP_SESSION_NONE)
 		<![endif]-->
 	</head>
 
-	<body>	
+	<body>	 
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
 				<div class="top-menu">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="colorlib-logo">David Marivat</div>
-							</div>
+								<div id="colorlib-logo">
+									David Marivat
+								</div>
+							</div> 
 							<div class="col-xs-10 text-right menu-1">
 								<ul>								
-									<li><a href="index.php?page=vers_le_menu_admin.php">Menu administrateur</a></li>
-									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>
 								</ul>
 							</div>
 						</div>
@@ -84,22 +85,22 @@ if (session_status() == PHP_SESSION_NONE)
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<?php
-                        	if(!empty($_SESSION))
+                        	if(!empty($_SESSION)) 
                         	{
                         	?>
-                            <h2> 
+                            <h2>  
                                 Bonjour <?php echo $_SESSION['pseudo'];?>
                             </h2>
                         	<?php
-                        	} 
-                        	?>
-							</p>
-							<h3>En tant qu'administrateur, vous pouvez:</h3>
-							<li><a href="index.php?page=vers_admin_ajout_blog">Ajouter un blog post</a></li>
-							<li class="has-dropdown active"><a href="index.php?page=vers_admin_modif_blog">Modifier un blog post</a></li>
-							<li class="has-dropdown"><a href="index.php?page=vers_admin_sup_blog">Suppprimer un blog post</a></li>
-							<li><a href="index.php?page=vers_la_validation_comment">Valider un commentaire</a></li>		
-						</div>
+                        	}  
+                        	?> 
+							</p> 
+							<h3>En tant qu'administrateur, vous pouvez:</h3>  
+							<li><a href="index.php?folder=BlogPostController&amp;page=vers_admin_ajout_blog">Ajouter un blog post</a></li>
+							<li class="has-dropdown active"><a href="index.php?folder=BlogPostController&amp;page=vers_admin_modif_blog">Modifier un blog post</a></li>
+							<li class="has-dropdown"><a href="index.php?folder=BlogPostController&amp;page=vers_admin_sup_blog">Suppprimer un blog post</a></li>
+							<li><a href="index.php?folder=CommentController&amp;page=vers_la_validation_comment">Valider un commentaire</a></li>		
+						</div> 
 					</div>
 				</div>
 			</div>
@@ -111,8 +112,7 @@ if (session_status() == PHP_SESSION_NONE)
                         	<h2>Navigation</h2> 
                         	<p>
                             	<ul class="colorlib-footer-links">
-                            		<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>   
                             	</ul>
                         	</p>
                     	</div>

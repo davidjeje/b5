@@ -66,8 +66,8 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
-									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>	
+									<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>	
 								</ul>
 							</div>
 						</div>
@@ -101,7 +101,7 @@
 							<div class="row contact-info-wrap">  
 								<?php   
 								foreach ($readAll1 as $n)
-								{
+								{ 
 								?>
                             		<h3> Le nom de l'auteur et le commentaire de celui-ci
                             		</h3>
@@ -110,9 +110,9 @@
                             		<p>et son commentaire est :</p>
                             		<?php echo htmlspecialchars($n->message());?>
                             		<br/>
-                            		<p class="text-center"><a href="index.php?page=vers_la_validation_comment_table&amp;id=<?=$n->id()?>&amp;blog_post_id=<?=$n->blog_post_id()?>&amp;auteur=<?=$n->auteur()?>&amp;message=<?=$n->message()?>" class="btn btn-primary btn-custom">Valider</a>
+                            		<p class="text-center"><a href="index.php?folder=CommentController&amp;page=vers_la_validation_comment_table&amp;id=<?=$n->id()?>&amp;blog_post_id=<?=$n->blog_post_id()?>&amp;auteur=<?=$n->auteur()?>&amp;message=<?=$n->message()?>" class="btn btn-primary btn-custom">Valider</a>
                             		</p>
-                            		<p class="text-center"><a href="index.php?page=vers_la_sup_comment_table&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">Supprimer</a>
+                            		<p class="text-center"><a href="index.php?folder=CommentController&amp;page=vers_la_sup_comment_table&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">Supprimer</a>
                             		</p>
                             	<?php
 								} 
@@ -131,7 +131,7 @@
 							<p>
 								<ul class="colorlib-footer-links">
                                 	<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
                             	</ul>
 							</p>
 						</div>

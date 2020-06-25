@@ -60,11 +60,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="colorlib-logo">David Marivat</div>
+								<div id="colorlib-logo">
+									David Marivat
+								</div>
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul> 
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>	
+									<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>	
 								</ul>
 							</div>
 						</div>
@@ -96,7 +98,7 @@
                             <h2>Navigation</h2>
                             <p>
                                 <ul class="colorlib-footer-links">
-                                    <li><a href="index.php?page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>     
+                                    <li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>     
                                 </ul>
                             </p>
                         </div>

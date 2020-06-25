@@ -286,7 +286,7 @@ if (session_status() == PHP_SESSION_NONE)
                                         if(empty($_SESSION))
                                         {
                                         ?> 
-                                            <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                            <li><a href="index.php?folder=UserController&amp;page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
                                         <?php
                                         }
                                         ?>                    

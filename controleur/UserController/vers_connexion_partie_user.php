@@ -35,7 +35,7 @@ function connexion_user1()
                     $_SESSION['id'] = $read->id();
                     $_SESSION['pseudo'] = $read->pseudo();
                     $_SESSION['email'] = $read->email();
-                    include(dirname(__FILE__).'/../../vue/profil.php'); 
+                    include(dirname(__FILE__).'/../../vue/profil.php');  
                 }
                 else
                 {

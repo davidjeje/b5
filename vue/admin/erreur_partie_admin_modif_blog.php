@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Modification d'un blog</title>
+		<title>Echec de la modification d'un blog</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -65,7 +65,7 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1"> 
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>	
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>	
 								</ul>
 							</div>
 						</div>

@@ -68,8 +68,8 @@
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
-									<li><a href="index.php?page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
-									<li><a href="index.php?page=vers_deconnexion_user">Déconnexion</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword">Menu administrateur</a></li>
+									<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user">Déconnexion</a></li>
 								</ul>
 							</div>
 						</div>
@@ -106,12 +106,12 @@
 											<li><a href="#"><i class="icon-twitter"></i></a></li>
 											<li><a href="#"><i class="icon-googleplus"></i></a></li>
 										</ul>
-									</div>
+									</div> 
 									<span class="category text-center"><a href="blog.html"><i class="icon-calendar3"></i> <?php echo$n->dateDisplay()?></a> | <a href="admin.php?id=.". class="posted-by"><i class="icon-user2"></i> <h1> <?php echo$n->author()?>  </h1></a> | <a href="blog.html"><i class="icon-bubble3"></i> </a></span>
 								</div> 
 									
-								<p class="text-center"><a href="index.php?page=vers_admin_message_sup_blog&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">Supprimer</a><p>
-							</article>
+								<p class="text-center"><a href="index.php?folder=BlogPostController&amp;page=vers_admin_message_sup_blog&amp;id=<?=$n->id()?>" class="btn btn-primary btn-custom">Supprimer</a><p>
+							</article> 
 							<?php
 							}
 							?>	
@@ -211,8 +211,8 @@
                         	<h2>Navigation</h2>
                         	<p>
                             	<ul class="colorlib-footer-links">
-                                	<li><a href="index.php?page=vers_le_menu_admin.php"><i class="icon-check"></i>Menu administrateur</a></li>
-                                	<li><a href="index.php?page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_menu_admin_sans_passsword"><i class="icon-check"></i>Menu administrateur</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_deconnexion_user"><i class="icon-check"></i>Déconnexion</a></li>
                             	</ul>
                         	</p>
                     	</div>

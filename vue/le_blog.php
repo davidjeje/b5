@@ -143,11 +143,10 @@ if (session_status() == PHP_SESSION_NONE)
 										<h1><?php echo htmlspecialchars($readc->message());?></h1>
 									</span></br>
 								</blockquote>
-							</div>  
-
+							</div>   
 							<div class="side-wrap"> 
 								<h2 class="sidebar-heading">Ajouter un commentaire</h2>
-								<form method="post" action="index.php?page=vers_insert_comment&amp;blog_post_id=<?=$read->id()?>" enctype="multipart/form-data">
+								<form method="post" action="index.php?folder=CommentController&amp;page=vers_insert_comment&amp;blog_post_id=<?=$read->id()?>" enctype="multipart/form-data">
  
                                     <label for="author">Auteur du commentaire</label>
                                     <input type="text" class="form-control" name="auteur" id="author" placeholder="Auteur" required>
@@ -230,7 +229,7 @@ if (session_status() == PHP_SESSION_NONE)
                                         if(empty($_SESSION))
                                         {
                                         ?> 
-                                            <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                            <li><a href="index.php?folder=UserController&amp;page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
                                         <?php
                                         }
                                         ?>    

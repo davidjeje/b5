@@ -102,11 +102,11 @@
 			</aside>
 			<div id="colorlib-contact">
 				<div class="container">
-					<div class="row">
+					<div class="row"> 
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<h1>Inscription</h1>
 							<div class="row contact-info-wrap"> 
-								<form method="post" action="index.php?page=vers_inserer_user">
+								<form method="post" action="index.php?folder=UserController&amp;page=vers_inserer_user">
                            			<div class="row form-group">
                                 		<div class="col-md-6">
                                     		<label for="fname">Pseudo</label>
@@ -147,9 +147,9 @@
                         	<p> 
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                	<li><a href="index.php?page=vers_liste_blogfolder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
+                                	<li><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
                                 	<li><a href="index.php?folder=UserController&amp;page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>
-                                	<li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li> 
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li> 
                             	</ul> 
                         	</p>
                     	</div>

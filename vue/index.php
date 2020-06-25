@@ -79,7 +79,7 @@ if (session_status() == PHP_SESSION_NONE)
                                     <?php 
                                     if(empty($_SESSION))
                                     {
-                                    ?>
+                                    ?> 
                                         <li><a href="index.php?folder=UserController&amp;page=vers_connexion_user">Connexion/inscription</a></li>
                     
                                     <?php
@@ -158,7 +158,7 @@ if (session_status() == PHP_SESSION_NONE)
                             </div> 
                             <div class="col-md-10 col-md-offset-1 animate-box">
                                 <h2>Formulaire de contact</h2> 
-                                <form method="post" action="index.php?page=vers_traitement_email">
+                                <form method="post" action="index.php?folder=UserController&amp;page=vers_traitement_email"> 
                                     <div class="row form-group">
                                         <div class="col-md-6">
                                             <label for="fname">Prénom</label>
@@ -228,7 +228,7 @@ if (session_status() == PHP_SESSION_NONE)
                                         if(empty($_SESSION))
                                         {
                                         ?> 
-                                            <li><a href="index.php?page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
+                                            <li><a href="index.php?folder=UserController&amp;page=vers_la_connexion_admin"><i class="icon-check"></i> Se connecter à la partie administration</a></li>
                                         <?php
                                         }
                                         ?>    

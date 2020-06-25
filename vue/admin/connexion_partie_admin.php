@@ -66,8 +66,8 @@
 							<div class="col-xs-10 text-right menu-1">
 								<ul>
 									<li><a href="index.php">Accueil</a></li>
-									<li class="has-dropdown active"><a href="index.php?page=vers_liste_blog">Blog post</a></li>
-									<li><a href="index.php?page=vers_connexion_user">Connexion/inscription</a></li>
+                                	<li class="has-dropdown"><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog">Blog post</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_connexion_user">Connexion/inscription</a></li>
 								</ul>
 							</div>
 						</div>
@@ -75,13 +75,13 @@
 				</div>
 			</nav>
 			 
-			<div id="colorlib-contact">   
+			<div id="colorlib-contact">    
 				<div class="container"> 
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 animate-box">
 							<h2>Partie réservé aux administrateurs</h2>
 							<div class="row contact-info-wrap">
-								<form method="post" action="index.php?page=vers_partie_admin">
+								<form method="post" action="index.php?folder=UserController&amp;page=vers_partie_admin">
                                     <label for="pseudo">pseudo</label>
                                     <input type="text" class="form-control" name="pseudo" id="pseudo" placeholder="Votre nom" autofocus required>
                                     <br/>
@@ -106,8 +106,8 @@
                         	<p>
                             	<ul class="colorlib-footer-links">
                                 	<li><a href="index.php"><i class="icon-check"></i> Acceuil</a></li>
-                                	<li><a href="index.php?page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
-                                	<li><a href="index.php?page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>    
+                                	<li><a href="index.php?folder=BlogPostController&amp;page=vers_liste_blog"><i class="icon-check"></i> Blog post</a></li>
+                                	<li><a href="index.php?folder=UserController&amp;page=vers_connexion_user"><i class="icon-check"></i>Connexion/inscription</a></li>    
                             	</ul>
                         	</p>
                     	</div>
